@@ -1,0 +1,149 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-main: 'Montserrat', sans-serif;
+$primary: #f49237;
+%font {
+  font-family: $font-main;
+  color: #fff;
+}
+
+.nwl {
+  nav {
+    background: #131921;
+    padding: 20px 0;
+
+    .nav_header {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      .dropdown-menu.show{
+        left: -5px!important;
+      }
+      .dropdown-menu{
+        min-width: 3rem;
+      }
+      .dropdown-item{
+        text-align: center;
+        padding: 0 10px;
+      }
+
+      .logo {
+        display: flex;
+        gap: 30px;
+
+        @media (min-width: 1201px) {
+          .search {
+            min-width: 490px;
+          }
+
+        }
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        .fa-search{
+          font-size: 21px;
+        }
+      }
+
+      .menu {
+        ul {
+          margin: 0;
+          padding: 0;
+
+          li {
+            display: inline-block;
+            margin: 0 20px;
+            color: #fff;
+            font-family: $font-main;
+            font-weight: 700;
+            list-style: none;
+            text-decoration: none;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .dropdown {
+        button {
+          width: 40px;
+          background: transparent;
+          color: #fff;
+          border: none;
+        }
+
+        .dropdown-toggle::after {
+          position: relative;
+          left: -55px;
+          font-size: 35px;
+        }
+      }
+    }
+  }
+
+  .second_menu {
+    background: $primary;
+
+    .container {
+      display: flex;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    ul {
+      margin-bottom: 0;
+      padding: 15px 0;
+
+      li {
+        a{
+          display: inline-block;
+          color: #fff;
+          position: relative;
+
+          text-decoration: none;
+          &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            background: #fff;
+            width: 0;
+            height: 5px;
+            bottom: -5px;
+            transition: all 400ms ease-in-out;
+
+          }
+          &:hover{
+            &::after{
+              width: 100%;
+              background: #fff;
+            }
+
+          }
+
+        }
+        display: inline-block;
+        margin: 0 20px;
+        @extend %font;
+        cursor: pointer;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .banner {
+    height: 90vh;
+    display: flex;
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("/Banner_.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+
+}
