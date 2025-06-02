@@ -13,72 +13,505 @@
     </head>
     <body>
         <div class="nwl">
-            <div>
+            <div class="menu_header">
                 <nav>
-                    <div class="nav_header position-relative px-3 pt-2">
-                        <div class="logo">
-                            <img src="/DHK_logo.svg" alt="">
-                            <div class="search">
-                                <div class="container">
-                                    <form class="form-inline">
-                                        <div class="input-group w-100">
-                                            <input type="text" class="form-control" placeholder="Code ou nom de l’article">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-primary" type="submit">
-                                                    <i class="fas fa-search text-dark"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="navbar navbar-expand-md navbar-light nav_header">
+                        <a class="navbar-brand" href="#">
+                            <img src="/DHK_logo.svg" alt="Logo" height="40">
+                        </a>
 
-                        <div class="menu">
-                            <ul>
-                                <li>Se connecter</li>
-                                <li>Nous contacter</li>
+                        <!-- Toggle button for mobile -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
+                                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Collapsible part -->
+                        <div class="collapse navbar-collapse" id="mainNavbar">
+                            <!-- Search form -->
+                           <div class="search">
+                               <form class="form-inline my-2 my-md-0 ml-md-3 w-100 search">
+                                   <div class="input-group w-100">
+                                       <input type="text" class="form-control" placeholder="Code ou nom de l’article">
+                                       <div class="input-group-append">
+                                           <button class="btn btn-primary" type="submit">
+                                               <i class="fas fa-search text-dark"></i>
+                                           </button>
+                                       </div>
+                                   </div>
+                               </form>
+                           </div>
+
+                            <!-- Right side menu items -->
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Se connecter</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Nous contacter</a>
+                                </li>
+                                <!-- Langue dropdown -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdownLang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        FR
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownLang">
+                                        <a class="dropdown-item" href="?lang=fr">FR</a>
+                                        <a class="dropdown-item" href="?lang=nl">NL</a>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
-                        <div>
-                            <div class="dropdown">
-                                <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" id="dropdownLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i></i> FR
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownLang">
-                                    <a class="dropdown-item" href="?lang=fr">FR</a>
-                                    <a class="dropdown-item" href="?lang=nl">NL</a>
-                                </div>
-                            </div>
-
-                        </div>
-
                     </div>
+
                 </nav>
+
+
                 <div class="second_menu">
-                    <div class="container">
-                        <ul>
-                            <li><a href="#">Pliage en Lign</a>e</li>
-                            <li><a href="#">Pergolas Roof-Line</a></li>
-                            <li><a href="#">Quick Order</a></li>
-                            <li><a href="#">Catalogue</a></li>
-                            <li><a href="#">Conseils et Astuces</a></li>
+                    <div class="wrapper">
+                        <ul class="navbar">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="produitsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Produits<i class="fas fa-chevron-down ml-1"></i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="produitsDropdown">
+                                    <h6 class="dropdown-header">Profils aluminium</h6>
+                                    <a class="dropdown-item" href="#">Profiles</a>
+                                    <a class="dropdown-item" href="#">Tubes</a>
+                                    <a class="dropdown-item" href="#">Barres pleines</a>
+                                    <a class="dropdown-item" href="#">Accessoires tubes</a>
+
+                                    <div class="dropdown-divider"></div>
+
+                                    <h6 class="dropdown-header">Tôles aluminium</h6>
+                                    <a class="dropdown-item" href="#">Tôles brutes</a>
+                                    <a class="dropdown-item" href="#">Tôles laquées et prélaquées</a>
+                                    <a class="dropdown-item" href="#">Renolit</a>
+                                    <a class="dropdown-item" href="#">Tôles spéciales</a>
+
+                                    <div class="dropdown-divider"></div>
+
+                                    <h6 class="dropdown-header">Pergola & Roof</h6>
+                                    <a class="dropdown-item" href="#">Pergola en KIT</a>
+                                    <a class="dropdown-item" href="#">Profils et accessoires</a>
+                                    <a class="dropdown-item" href="#">Eclairage LED</a>
+                                </div>
+                            </li>
+
+
+                            <li class="nav-item"><a class="nav-link" href="#">Pliage en Ligne</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Pergolas Roof-Line</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Quick Order</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Catalogue</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Conseils et Astuces</a></li>
                         </ul>
+
+
                     </div>
                 </div>
             </div>
             <div class="banner">
 
             </div>
+            <section class="py-5 product" id="produit">
+                <div class="wrapper">
+                    <div class="row text-center">
+
+                        <!-- Profils aluminium -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Profils aluminium</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3">
+                                            <a href="product.html">
+                                                <img src="Profile.png" class="img-fluid mb-1" alt="Profilés">
+                                                <div>Profilés</div>
+                                            </a>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Tube.png" class="img-fluid mb-1" alt="Tubes">
+                                            <div>Tubes</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Barre.png" class="img-fluid mb-1" alt="Barre pleines">
+                                            <div>Barre pleines</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Accessoir_tube.png" class="img-fluid mb-1" alt="Accessoires tubes">
+                                            <div>Accessoires tubes</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <a href="#" class="btn ">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tôles aluminium -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tôles aluminium</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3">
+                                            <img src="Tole.png" class="img-fluid mb-1" alt="Tôles brutes">
+                                            <div>Tôles brutes</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Tole_laquee.png" class="img-fluid mb-1" alt="Tôles laquées">
+                                            <div>Tôles laquées et prélaquées</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Renolit.png" class="img-fluid mb-1" alt="Renolit">
+                                            <div>Renolit</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Tole_speciale.png" class="img-fluid mb-1" alt="Tôles spéciales">
+                                            <div>Tôles spéciales</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <a href="#" class="btn ">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pergola & Roof -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pergola & Roof</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3">
+                                            <img src="Pergola_kit.png" class="img-fluid mb-1" alt="Pergola en KIT">
+                                            <div>Pergola en KIT</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Panneau_plaque.png" class="img-fluid mb-1" alt="Panneaux et plaques">
+                                            <div>Panneaux et plaques</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Profile_accessoir.png" class="img-fluid mb-1" alt="Profils et accessoires">
+                                            <div>Profils et accessoires</div>
+                                        </li>
+                                        <li>
+                                            <img src="Eclaireage.png" class="img-fluid mb-1" alt="Éclairage LED">
+                                            <div>Éclairage LED</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <a href="#" class="btn ">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Seuils aluminium -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Seuils aluminium</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3">
+                                            <img src="Seuils_allu.png" class="img-fluid mb-1" alt="Seuils aluminium">
+                                            <div>Seuils aluminium</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Embout_de_seuils.png" class="img-fluid mb-1" alt="Embouts de seuils">
+                                            <div>Embouts de seuils</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Jonction.png" class="img-fluid mb-1" alt="Jonctions">
+                                            <div>Jonctions & coins</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Accessoir_seuil.png" class="img-fluid mb-1" alt="Accessoires seuils">
+                                            <div>Accessoires seuils</div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <a href="#" class="btn ">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+
+                        <!-- Facade -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Façade</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3">
+                                            <img src="Bardage_allu.png" class="img-fluid mb-1" alt="Bardage aluminium">
+                                            <div>Bardage aluminium</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Bardage_hpl.png" class="img-fluid mb-1" alt="Bardage HPL et composite">
+                                            <div>Bardage HPL et composite</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Bardage_poly.png" class="img-fluid mb-1" alt="Bardage polycarbonat">
+                                            <div>Bardage polycarbonate</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Fixation.png" class="img-fluid mb-1" alt="Fixation et collage">
+                                            <div>Fixation et collage </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <a href="#" class="btn ">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panneaux Sandwichs -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Panneaux Sandwichs</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3">
+                                            <img src="Allu_panneaux.png" class="img-fluid mb-1" alt="Tôles brutes">
+                                            <div>Tôles brutes</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="HPL.png" class="img-fluid mb-1" alt="Tôles laquées">
+                                            <div>Tôles laquées et prélaquées</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="PVC.png" class="img-fluid mb-1" alt="Renolit">
+                                            <div>Renolit</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Speciaux.png" class="img-fluid mb-1" alt="Tôles spéciales">
+                                            <div>Tôles spéciales</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <a href="#" class="btn ">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panneaux composites et thermoplastiques -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Panneaux composites et thermoplastiques</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3">
+                                            <img src="Allu_composite.png" class="img-fluid mb-1" alt="Aluminium composite">
+                                            <div>Aluminium composite</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="PPMA.png" class="img-fluid mb-1" alt="PMMA">
+                                            <div>PMMA</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Polycarbonate.png" class="img-fluid mb-1" alt="Polycarbonate">
+                                            <div>Polycarbonate</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Panneaux_purenit.png" class="img-fluid mb-1" alt="Panneaux Purenit">
+                                            <div>Panneaux Purenit</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <a href="#" class="btn ">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fabrication aluminium sur mesure  -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fabrication aluminium sur mesure </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3">
+                                            <img src="Découpe_pliage.png" class="img-fluid mb-1" alt="Découpe/Pliage de tôles">
+                                            <div>Découpe/Pliage de tôles</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Couvre-mure.png" class="img-fluid mb-1" alt="Couvre-murs en aluminium">
+                                            <div>Couvre-murs en aluminium</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Cadres.png" class="img-fluid mb-1" alt="Cadres assemblés ou soudés">
+                                            <div>Cadres assemblés ou soudés</div>
+                                        </li>
+                                        <li class="mb-3">
+                                            <img src="Fraisage.png" class="img-fluid mb-1" alt="Fraisage tôles">
+                                            <div>Fraisage tôles</div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <a href="#" class="btn ">Voir plus</a>
+                                </div>
+                            </div>
+                        </div>
 
 
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-4 text-white annonces">
+                <div class="container">
+                    <h6 class="mb-3">Annonces</h6>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="h-100">
+                                <img src="Metier_du_bois.png" class="img-fluid mb-2" alt="M3 Métiers du bois">
+                                <p class=" mb-0">Métiers du Bois ouvre enfin ses portes !</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="h-100">
+                                <img src="Couvre_mur.png" class="img-fluid mb-2" alt="Couvre-mur ALUKAPPING">
+                                <p class=" mb-0">Couvre-mur ALUKAPPING</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="h-100">
+                                <img src="Seuil_RB.png" class="img-fluid mb-2" alt="Seuil RB">
+                                <p class=" mb-0">Seuil RB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!--            <section class="py-4 services">-->
+<!--                <div class="wrapper">-->
+<!--                    <div class="d-flex justify-content-between align-items-center mb-3">-->
+<!--                        <h4 class="mb-0 title">Découvrez nos services</h4>-->
+<!--                        <a href="#" class="btn btn-g text-white">En savoir plus <span>&rarr;</span></a>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-6 mb-3">-->
+<!--                            <div class="card text-white">-->
+<!--                                <div class="card-img-wrapper"><img src="Pliage.png" class="card-img" alt="Pliage en ligne"></div>-->
+
+<!--                                <div class="card-img-overlay d-flex align-items-end">-->
+<!--                                    <h5 class="card-title p-2 fs-32">Pliage en ligne</h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-6 mb-3">-->
+<!--                            <div class="card text-white">-->
+<!--                                <div class="card-img-wrapper"><img src="Pergola_pre_poser.png" class="card-img" alt="Pergolas prêtes à poser"></div>-->
+
+<!--                                <div class="card-img-overlay d-flex align-items-end">-->
+<!--                                    <h5 class="card-title p-2 fs-32">Pergolas prêtes à poser</h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
+
+<!--            <section class="py-5 livre">-->
+<!--                <div class="container">-->
+<!--                    <div class="row align-items-center text-white">-->
+<!--                        <div class="col-md-5 mb-4 mb-md-0">-->
+<!--                            <img src="DHK_Catalog.png" class="img-fluid" alt="Catalogue DHK">-->
+<!--                        </div>-->
+<!--                        <div class="col-md-7">-->
+<!--                            <h4 class="mb-3">Découvrez notre catalogue et trouvez le produit parfait pour vous !</h4>-->
+<!--                            <p>Parcourez nos collections et laissez-vous inspirer.</p>-->
+<!--                            <a href="#" class="btn btn-s">Consulter</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
+
+<!--            <footer class="text-white pt-5 pb-4 footer">-->
+<!--                <div class="container text-md-left">-->
+<!--                    <div class="row text-md-left">-->
+
+<!--                        &lt;!&ndash; Logo et réseaux sociaux &ndash;&gt;-->
+<!--                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">-->
+<!--                            <img src="DHK_logo.svg" class="img_logo" alt="DHK Logo" style="max-width: 120px;">-->
+<!--                            <p class="mt-3">Your Trusted Partner for Project Solutions</p>-->
+<!--                            <div class="mt-3 sociaux">-->
+<!--                                <a href="#" class="text-white mr-3"><i class="fab fa-facebook fa-lg"></i></a>-->
+<!--                                <a href="#" class="text-white mr-3"><i class="fab fa-instagram fa-lg"></i></a>-->
+<!--                                <a href="#" class="text-white mr-3"><i class="fab fa-linkedin fa-lg"></i></a>-->
+<!--                                <a href="#" class="text-white mr-3"><i class="fab fa-youtube fa-lg"></i></a>-->
+<!--                                <a href="#" class="text-white"><i class="fab fa-tiktok fa-lg"></i></a>-->
+<!--                                <p class="mt-2">Châtelineau - Genk - Luxembourg</p>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+
+<!--                        &lt;!&ndash; Liens utiles &ndash;&gt;-->
+<!--                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">-->
+<!--                            <h6 class="text-uppercase mb-4 font-weight-bold">Liens utiles</h6>-->
+<!--                            <p><a href="#" class="text-white">Horaire d’ouverture</a></p>-->
+<!--                            <p><a href="#" class="text-white">Planning des livraisons</a></p>-->
+<!--                            <p><a href="#" class="text-white">Formulaire de contact</a></p>-->
+<!--                            <p><a href="#" class="text-white">Jobs</a></p>-->
+<!--                            <p><a href="#" class="text-white">Politique de cookies</a></p>-->
+<!--                            <p><a href="#" class="text-white">Politique de confidentialité</a></p>-->
+<!--                            <p><a href="#" class="text-white">Condition générales de vente</a></p>-->
+<!--                        </div>-->
+
+<!--                        &lt;!&ndash; Formulaire d'inscription &ndash;&gt;-->
+<!--                        <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mt-3">-->
+<!--                            <h6 class="text-uppercase mb-4 font-weight-bold">Restez informé</h6>-->
+<!--                            <p>Abonnez-vous à notre newsletter mensuelle.</p>-->
+<!--                            <form>-->
+<!--                                <div class="form-group">-->
+<!--                                    <label>Prénom *</label>-->
+<!--                                    <input type="text" class="form-control" placeholder="Prénom">-->
+<!--                                </div>-->
+<!--                                <div class="form-group">-->
+<!--                                    <label>Nom *</label>-->
+<!--                                    <input type="text" class="form-control" placeholder="Nom">-->
+<!--                                </div>-->
+<!--                                <div class="form-group">-->
+<!--                                    <label>Email *</label>-->
+<!--                                    <input type="email" class="form-control" placeholder="Email *" required>-->
+<!--                                </div>-->
+<!--                                <div class="form-group">-->
+<!--                                    <label class="d-block">Vous êtes : *</label>-->
+<!--                                    <div class="form-check form-check-inline">-->
+<!--                                        <input class="form-check-input" type="radio" name="type" id="pro" value="Professionel">-->
+<!--                                        <label class="form-check-label" for="pro">Professionel</label>-->
+<!--                                    </div>-->
+<!--                                    <div class="form-check form-check-inline">-->
+<!--                                        <input class="form-check-input" type="radio" name="type" id="particulier" value="Particulier">-->
+<!--                                        <label class="form-check-label" for="particulier">Particulier</label>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="form-group form-check">-->
+<!--                                    <input type="checkbox" class="form-check-input" id="privacy">-->
+<!--                                    <label class="form-check-label small" for="privacy">En vous inscrivant à notre newsletter, vous acceptez l’utilisation de vos données personnelles conformément à notre politique de confidentialité.</label>-->
+<!--                                </div>-->
+<!--                                <button type="submit" class="btn btn-success btn-block">S’inscrire</button>-->
+<!--                            </form>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </footer>-->
 
 
 
         </div>
-
-
-
 
 
         <script type="module" src="/src/main.js"></script>

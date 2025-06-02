@@ -7,9 +7,68 @@ $primary: #f49237;
   font-family: $font-main;
   color: #fff;
 }
-
+%wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+%btn-g{
+  background: $primary;
+  transition: all 400ms ease-in-out;
+  &:hover{
+    background: #131921;
+  }
+}
+%btn-s{
+  background: #033866;
+  color: #fff;
+}
+/***** scollbar *****/
+::-webkit-scrollbar 				{ width: 8px; height: 8px; background-color: #eee;}
+::-webkit-scrollbar-thumb			{ background-color: $primary;}
 .nwl {
+  @extend %font;
+  background: #EEEBEB;
+  padding: 50px 0;
+  .menu_header{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+  }
+  &.single_product{
+    position: relative;
+    margin-top: 200px;
+    padding: 50px 0;
+    .chiffre{
+      width: 40px;
+    }
+    .container{
+      max-width: 1400px;
+    }
+    .text-warning{
+      border: 1px solid;
+      width: 180px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    h2.font-weight-bold{
+      color: black;
+      font-size: 48px;
+    }
+  }
   nav {
+    .navbar-brand{
+      img{
+        height: 70px;
+      }
+    }
+
+    .wrapper{
+      @extend %wrapper;
+    }
     background: #131921;
     padding: 20px 0;
 
@@ -20,9 +79,12 @@ $primary: #f49237;
       justify-content: space-between;
       align-items: center;
       position: relative;
-      .dropdown-menu.show{
-        left: -5px!important;
+      .main_mavbar{
+        display: flex!important;
+        justify-content: space-between!important;
       }
+
+
       .dropdown-menu{
         min-width: 3rem;
       }
@@ -49,27 +111,25 @@ $primary: #f49237;
         .fa-search{
           font-size: 21px;
         }
-      }
-
-      .menu {
-        ul {
-          margin: 0;
-          padding: 0;
-
-          li {
-            display: inline-block;
-            margin: 0 20px;
-            color: #fff;
-            font-family: $font-main;
-            font-weight: 700;
-            list-style: none;
-            text-decoration: none;
-            cursor: pointer;
-          }
+        @media (min-width: 769px) {
+          min-width: 420px;
         }
       }
 
-      .dropdown {
+        .nav-link {
+          padding-right: 0.5rem;
+          font-weight: 700;
+          color: #fff !important;
+          @media (min-width: 769px) {
+            padding-left: 50px;
+          }
+
+      }
+      .dropdown-menu{
+        left: 50%;
+        transform:translate(-50%);
+      }
+      .dropdown{
         button {
           width: 40px;
           background: transparent;
@@ -79,8 +139,9 @@ $primary: #f49237;
 
         .dropdown-toggle::after {
           position: relative;
-          left: -55px;
-          font-size: 35px;
+          right: 120%;
+          top: 5px;
+          font-size: 28px;
         }
       }
     }
@@ -89,29 +150,29 @@ $primary: #f49237;
   .second_menu {
     background: $primary;
 
-    .container {
-      display: flex;
-      align-items: center;
-      max-width: 1400px;
-      margin: 0 auto;
+    .dropdown-item{
+      color: black;
     }
+  .wrapper{
+    @extend %wrapper;
+  }
 
     ul {
       margin-bottom: 0;
       padding: 15px 0;
+      li:nth-of-type(1){margin: 0 20px 0 0!important;}
 
       li {
         a{
           display: inline-block;
           color: #fff;
           position: relative;
-
           text-decoration: none;
-          &::after{
+          &::before{
             content: "";
             position: absolute;
             left: 0;
-            background: #fff;
+            background: transparent;
             width: 0;
             height: 5px;
             bottom: -5px;
@@ -119,13 +180,16 @@ $primary: #f49237;
 
           }
           &:hover{
-            &::after{
+            &::before{
               width: 100%;
               background: #fff;
             }
 
           }
 
+        }
+        .dropdown-toggle::after{
+          display: none;
         }
         display: inline-block;
         margin: 0 20px;
@@ -137,13 +201,144 @@ $primary: #f49237;
   }
 
   .banner {
-    height: 90vh;
+    height: 100vh;
     display: flex;
-    background:
-            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url("/Banner_.jpg") no-repeat center center;
+    background: url("/Banner_landing.jpg") no-repeat center top;
     background-size: cover;
+    background-position: center 5%; /* Ajuste verticalement */
+  }
+  .product{
+    .wrapper{
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .list-unstyled {
+      padding-left: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0;
+      .mb-3 div{
+        color: black;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+    .card{
+      transition: all 0.3s ease;
+      img{
+        transition: transform 0.3s ease;
+        &:hover{
+          transform: scale(1.03);
+        }
+      }
+      &:hover{
+        box-shadow: 0 8px 20px rgb(244 146 55 / 88%);
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+      }
+    }
+    .card-title{
+      margin-bottom: 40px;
+      text-align: left;
+      color: black;
+      font-weight: 600;
+      height: 25px;
+    }
+    .card-footer {
+      padding: 0 1.25rem 0.75rem;
+      background-color: rgba(0, 0, 0, 0.03);
+      border: 0;
+      display: flex;
+      .btn{
+        background: $primary;
+        color: #fff;
+        transition: all 400ms ease-in-out;
+        cursor: pointer;
+        &:hover{
+          background: #131921;
+        }
+      }
+    }
+
+  }
+.annonces{
+  @extend %wrapper;
+  background: #386938;
+  margin: 25px auto 100px;
+  .container{
+    width: 100%;
+    max-width: 100%;
+    padding: 0 50px;
+  }
+}
+.services{
+  background: #fff;
+  .fs-32{
+    font-size: 32px;
+  }
+  .btn-g{
+    @extend %btn-g;
+  }
+  .wrapper{
+    margin: 40px auto;
+    max-width: 1400px;
+  }
+  margin-bottom: 50px;
+  .title{
+    color: black;
+    font-weight: 700;
+    font-size: 36px;
+  }
+  .card-img-wrapper {
+    position: relative;
+    overflow: hidden;
   }
 
+  .card-img-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(19, 10, 71, 0.6), rgba(19, 10, 71, 0.6));
+    z-index: 1;
+  }
+
+  .card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 0;
+  }
+
+  .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+  .livre{
+    background: #F07840;
+    .btn-s{
+      @extend %btn-s;
+    }
+  }
+  .footer{
+    .container{
+      @extend %wrapper;
+    }
+    background: #111822;
+    .sociaux{
+      position: absolute;
+      bottom: 0;
+    }
+  }
 
 }
