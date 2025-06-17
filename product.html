@@ -1,220 +1,407 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--    <head>-->
-<!--        <meta charset="UTF-8"/>-->
-<!--        <link rel="icon" type="image/svg+xml" href="/vite.svg"/>-->
-<!--        <link rel="stylesheet" href="src/css/actiontext.css">-->
-<!--        <link rel="stylesheet" href="src/css/application.css">-->
-<!--        <link rel="stylesheet" href="src/css/wordpress.css">-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+        <link rel="stylesheet" href="src/css/actiontext.css">
+        <link rel="stylesheet" href="src/css/application.css">
+        <link rel="stylesheet" href="src/css/wordpress.css">
 
 
-<!--        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
-<!--        <title>DHK</title>-->
-<!--    </head>-->
-<!--    <body>-->
-<!--        <div class="nwl single_product">-->
-<!--            <div class="menu_header">-->
-<!--                <nav>-->
-<!--                    <div class="navbar navbar-expand-md navbar-light nav_header">-->
-<!--                        <a class="navbar-brand" href="#">-->
-<!--                            <img src="/DHK_logo.svg" alt="Logo" height="40">-->
-<!--                        </a>-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>DHK</title>
+        <script src="src/js/application.js"></script>
+    </head>
+    <body>
+        <div class="nwl single_product">
+            <div class="menu_header">
 
-<!--                        &lt;!&ndash; Toggle button for mobile &ndash;&gt;-->
-<!--                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"-->
-<!--                                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--                            <span class="navbar-toggler-icon"></span>-->
-<!--                        </button>-->
+                <nav>
+                    <div class="navbar navbar-expand-md navbar-light nav_header">
+                        <div class="logo_search">
+                            <div>
+                                <a class="navbar-brand" href="#">
+                                    <img src="/DHK_logo.svg" alt="Logo" height="40">
+                                </a>
+                            </div>
+                            <div class="search">
+                                <form class="form-inline my-2 my-md-0 ml-md-3 w-100 search">
+                                    <div class="input-group w-100">
+                                        <input type="text" class="form-control" placeholder="Code ou nom de l’article">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit">
+                                                <i class="fas fa-search text-dark"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
 
-<!--                        &lt;!&ndash; Collapsible part &ndash;&gt;-->
-<!--                        <div class="collapse navbar-collapse" id="mainNavbar">-->
-<!--                            &lt;!&ndash; Search form &ndash;&gt;-->
-<!--                            <div class="search">-->
-<!--                                <form class="form-inline my-2 my-md-0 ml-md-3 w-100 search">-->
-<!--                                    <div class="input-group w-100">-->
-<!--                                        <input type="text" class="form-control" placeholder="Code ou nom de l’article">-->
-<!--                                        <div class="input-group-append">-->
-<!--                                            <button class="btn btn-primary" type="submit">-->
-<!--                                                <i class="fas fa-search text-dark"></i>-->
-<!--                                            </button>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </form>-->
-<!--                            </div>-->
+                        <!-- Right side menu items -->
+                        <div>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Se connecter</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Nous contacter</a>
+                                </li>
+                                <!-- Langue dropdown -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdownLang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        FR
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownLang">
+                                        <a class="dropdown-item" href="?lang=fr">FR</a>
+                                        <a class="dropdown-item" href="?lang=nl">NL</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
 
-<!--                            &lt;!&ndash; Right side menu items &ndash;&gt;-->
-<!--                            <ul class="navbar-nav ml-auto">-->
-<!--                                <li class="nav-item">-->
-<!--                                    <a class="nav-link" href="#">Se connecter</a>-->
-<!--                                </li>-->
-<!--                                <li class="nav-item">-->
-<!--                                    <a class="nav-link" href="#">Nous contacter</a>-->
-<!--                                </li>-->
-<!--                                &lt;!&ndash; Langue dropdown &ndash;&gt;-->
-<!--                                <li class="nav-item dropdown">-->
-<!--                                    <a class="nav-link dropdown-toggle" href="#" id="dropdownLang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                                        FR-->
-<!--                                    </a>-->
-<!--                                    <div class="dropdown-menu" aria-labelledby="dropdownLang">-->
-<!--                                        <a class="dropdown-item" href="?lang=fr">FR</a>-->
-<!--                                        <a class="dropdown-item" href="?lang=nl">NL</a>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    </div>
+                </nav>
 
-<!--                </nav>-->
+                <div class="second_menu">
+                    <div class="content">
+                        <div class="nav_header">
+                            <!-- Bouton -->
+                            <button id="btnToggleMenu" class="hamburger-btn" aria-expanded="false">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                            </button>
 
-
-<!--                <div class="second_menu">-->
-<!--                    <div class="wrapper">-->
-<!--                        <ul class="navbar">-->
-<!--                            <li class="nav-item dropdown">-->
-<!--                                <a class="nav-link dropdown-toggle" href="#" id="produitsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                                    Produits<i class="fas fa-chevron-down ml-1"></i>-->
-<!--                                </a>-->
-<!--                                <div class="dropdown-menu" aria-labelledby="produitsDropdown">-->
-<!--                                    <h6 class="dropdown-header">Profils aluminium</h6>-->
-<!--                                    <a class="dropdown-item" href="#">Profiles</a>-->
-<!--                                    <a class="dropdown-item" href="#">Tubes</a>-->
-<!--                                    <a class="dropdown-item" href="#">Barres pleines</a>-->
-<!--                                    <a class="dropdown-item" href="#">Accessoires tubes</a>-->
-
-<!--                                    <div class="dropdown-divider"></div>-->
-
-<!--                                    <h6 class="dropdown-header">Tôles aluminium</h6>-->
-<!--                                    <a class="dropdown-item" href="#">Tôles brutes</a>-->
-<!--                                    <a class="dropdown-item" href="#">Tôles laquées et prélaquées</a>-->
-<!--                                    <a class="dropdown-item" href="#">Renolit</a>-->
-<!--                                    <a class="dropdown-item" href="#">Tôles spéciales</a>-->
-
-<!--                                    <div class="dropdown-divider"></div>-->
-
-<!--                                    <h6 class="dropdown-header">Pergola & Roof</h6>-->
-<!--                                    <a class="dropdown-item" href="#">Pergola en KIT</a>-->
-<!--                                    <a class="dropdown-item" href="#">Profils et accessoires</a>-->
-<!--                                    <a class="dropdown-item" href="#">Eclairage LED</a>-->
-<!--                                </div>-->
-<!--                            </li>-->
-
-
-<!--                            <li class="nav-item"><a class="nav-link" href="#">Pliage en Ligne</a></li>-->
-<!--                            <li class="nav-item"><a class="nav-link" href="#">Pergolas Roof-Line</a></li>-->
-<!--                            <li class="nav-item"><a class="nav-link" href="#">Quick Order</a></li>-->
-<!--                            <li class="nav-item"><a class="nav-link" href="#">Catalogue</a></li>-->
-<!--                            <li class="nav-item"><a class="nav-link" href="#">Conseils et Astuces</a></li>-->
-<!--                        </ul>-->
-
-
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="container">-->
-<!--                <div class="row">-->
-<!--                    &lt;!&ndash; Image Produit &ndash;&gt;-->
-<!--                    <div class="col-md-6 text-center">-->
-<!--                        <div class="border rounded">-->
-<!--                            <div style="background:#ccc; width:100%; padding-top:100%; border-radius:8px;"></div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-<!--                    &lt;!&ndash; Détails Produit &ndash;&gt;-->
-<!--                    <div class="col-md-6">-->
-<!--                        <p class="text-uppercase text-warning small">Product Category</p>-->
-<!--                        <h2 class="font-weight-bold">Product Name</h2>-->
-<!--                        <p class="text-muted mb-2">Code: <strong class="text-dark">TA20102.33</strong></p>-->
-
-<!--                        <p>-->
-<!--                            <span class="text-muted">Prix standard:</span> <strong>361,53 €</strong><br>-->
-<!--                            <span class="text-muted">Prix net:</span> <strong class="text-success h5">325,38 € / PCE</strong>-->
-<!--                        </p>-->
-
-<!--                        <p class="text-success small">-->
-<!--                            <i class="text-success mr-1">&#x2714;</i> En stock-->
-<!--                        </p>-->
-
-<!--                        &lt;!&ndash; Quantité + Ajouter au panier &ndash;&gt;-->
-<!--                        &lt;!&ndash; Ajouter au panier (désactivé au départ) &ndash;&gt;-->
-<!--                        <div class="d-flex align-items-center mb-3">-->
-<!--                            <div class="input-group" style="width: 110px;">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                    <button class="btn btn-outline-secondary" type="button" id="qty-minus">-</button>-->
-<!--                                </div>-->
-<!--                                <input type="number" class="chiffre text-center" value="1" id="qty-input">-->
-<!--                                <div class="input-group-append">-->
-<!--                                    <button class="btn btn-outline-secondary" type="button" id="qty-plus">+</button>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <button class="btn btn-success ml-3" id="add-to-cart-btn" disabled>Ajouter au panier</button>-->
-<!--                        </div>-->
+                            <!-- Menu -->
+                            <div id="mainNavbar">
+                                <ul class="navbar">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="produitsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Produits <i class="fas fa-chevron-down ml-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="produitsDropdown">
+                                            <div class="dropdown-section">
+                                                <h6 class="dropdown-header">Profils aluminium</h6>
+                                                <div class="dropdown-items">
+                                                    <a class="dropdown-item" href="#">Profiles</a>
+                                                    <a class="dropdown-item" href="#">Tubes</a>
+                                                    <a class="dropdown-item" href="#">Barres pleines</a>
+                                                    <a class="dropdown-item" href="#">Accessoires tubes</a>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                            <div class="dropdown-section">
+                                                <h6 class="dropdown-header">Tôles aluminium</h6>
+                                                <div class="dropdown-items">
+                                                    <a class="dropdown-item" href="#">Tôles brutes</a>
+                                                    <a class="dropdown-item" href="#">Tôles laquées et prélaquées</a>
+                                                    <a class="dropdown-item" href="#">Renolit</a>
+                                                    <a class="dropdown-item" href="#">Tôles spéciales</a>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                            <div class="dropdown-section">
+                                                <h6 class="dropdown-header">Pergola & Roof</h6>
+                                                <div class="dropdown-items">
+                                                    <a class="dropdown-item" href="#">Pergola en KIT</a>
+                                                    <a class="dropdown-item" href="#">Profils et accessoires</a>
+                                                    <a class="dropdown-item" href="#">Eclairage LED</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
 
 
-<!--                        &lt;!&ndash; Détails dimensions &ndash;&gt;-->
-<!--                        <div class="mb-3">-->
-<!--                            <h6>Détails</h6>-->
-<!--                            <p class="mb-0">Longueur : 3000 mm</p>-->
-<!--                            <p class="mb-0">Largeur : 1800 mm</p>-->
-<!--                            <p class="mb-0">Épaisseur : 6 mm</p>-->
-<!--                            <p class="mb-0">Couleur : Transparent</p>-->
-<!--                        </div>-->
+                                    <li class="nav-item"><a class="nav-link" href="#">Pliage en Ligne</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Pergolas Roof-Line</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Quick Order</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Catalogue</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Conseils et Astuces</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-<!--                        &lt;!&ndash; Couleurs &ndash;&gt;-->
-<!--                        <div class="form-group">-->
-<!--                            <label for="color">Couleurs</label>-->
-<!--                            <select class="form-control" id="color">-->
-<!--                                <option>Select</option>-->
-<!--                            </select>-->
-<!--                        </div>-->
+                </div>
 
-<!--                        &lt;!&ndash; Découpe &ndash;&gt;-->
-<!--                        <div class="form-group">-->
-<!--                            <label>Découpe</label>-->
-<!--                            <div class="form-row">-->
-<!--                                <div class="col">-->
-<!--                                    <input type="number" class="form-control" placeholder="Quantité">-->
-<!--                                </div>-->
-<!--                                <div class="col">-->
-<!--                                    <input type="number" class="form-control" placeholder="Longueur">-->
-<!--                                </div>-->
-<!--                                <div class="col">-->
-<!--                                    <input type="number" class="form-control" placeholder="Largeur">-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!-- Image Produit -->
+                    <div class="col-md-6 text-center">
+                        <div class="border rounded">
+                            <div style="background:#ccc; width:100%; padding-top:100%; border-radius:8px;"></div>
+                        </div>
+                    </div>
 
-<!--                        &lt;!&ndash; Boutons infos &ndash;&gt;-->
-<!--                        <div class="mt-3">-->
-<!--                            <p><strong>Plus d'informations</strong></p>-->
-<!--                            <button class="btn btn-light text-muted mr-2" disabled>Fiche produit</button>-->
-<!--                            <button class="btn btn-secondary text-white" disabled>Documentation technique</button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+                    <!-- Détails Produit -->
+                    <div class="col-md-6">
+                        <p class="text-uppercase text-warning small">Product Category</p>
+                        <h2 class="font-weight-bold">Product Name</h2>
+                        <p class="text-muted mb-2">Code: <strong class="text-dark">TA20102.33</strong></p>
 
-<!--        </div>-->
+                        <p>
+                            <span class="text-muted">Prix standard:</span> <strong>361,53 €</strong><br>
+                            <span class="text-muted">Prix net:</span> <strong class="text-success h5">325,38 € / PCE</strong>
+                        </p>
+
+                        <p class="text-success small">
+                            <i class="text-success mr-1">&#x2714;</i> En stock
+                        </p>
+
+                        <div class="d-flex align-items-center mb-3 detail">
+                            <div class="input-group" style="width: 110px;">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" id="qty-minus">-</button>
+                                </div>
+                                <input type="number" class="chiffre text-center" value="1" id="qty-input">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="qty-plus">+</button>
+                                </div>
+                            </div>
+                            <button class="btn btn-success ml-3" id="add-to-cart-btn" disabled>Ajouter au panier</button>
+                        </div>
 
 
-<!--        <script type="module" src="/src/main.js"></script>-->
-<!--        <script src="src/js/application.js"></script>-->
-<!--        <script>-->
-<!--            $(document).ready(function () {-->
-<!--                $('#qty-minus, #qty-plus').on('click', function () {-->
-<!--                    // Activer le bouton-->
-<!--                    $('#add-to-cart-btn').prop('disabled', false);-->
+                        <!-- Détails dimensions -->
+                        <div class="mb-3">
+                            <h6>Détails</h6>
+                            <p class="mb-0">Longueur : 3000 mm</p>
+                            <p class="mb-0">Largeur : 1800 mm</p>
+                            <p class="mb-0">Épaisseur : 6 mm</p>
+                            <p class="mb-0">Couleur : Transparent</p>
+                        </div>
 
-<!--                    let qty = parseInt($('#qty-input').val());-->
+                        <!-- Couleurs -->
+                        <div class="form-group panier">
+                            <label for="color">Couleurs</label>
+                            <select class="form-control" id="color">
+                                <option>Select</option>
+                            </select>
+                        </div>
 
-<!--                    if ($(this).attr('id') === 'qty-minus') {-->
-<!--                        if (qty > 1) {-->
-<!--                            $('#qty-input').val(qty - 1);-->
-<!--                        }-->
-<!--                    } else {-->
-<!--                        $('#qty-input').val(qty + 1);-->
-<!--                    }-->
-<!--                });-->
-<!--            });-->
-<!--        </script>-->
-<!--    </body>-->
-<!--</html>-->
+                        <!-- Découpe -->
+                        <div class="form-group panier">
+                            <label><strong>Découpe</strong></label>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="">Quantité</label>
+                                    <input type="number" class="form-control" placeholder="Quantité">
+                                </div>
+                                <div class="col">
+                                    <label for="">Longueur</label>
+                                    <input type="number" class="form-control" placeholder="Longueur">
+                                </div>
+                                <div class="col">
+                                    <label for="">Largeur</label>
+                                    <input type="number" class="form-control" placeholder="Largeur">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Boutons infos -->
+                        <div class="mt-3">
+                            <p><strong style="color:black">Plus d'informations</strong></p>
+                            <button class="btn btn-secondary text-white" disabled>Fiche produit</button>
+                            <button class="btn btn-secondary text-white" disabled>Documentation technique</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="decription">
+                <div class="container my-5">
+
+                    <!-- Description -->
+                    <div class="mb-4">
+                        <h5 class="font-weight-bold">DESCRIPTION</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit varius nisl, sit amet mollis orci fermentum et.
+                            Integer convallis metus lorem, eget consectetur sem consequat ut. Integer massa metus, hendrerit quis eleifend id, cursus vitae magna.
+                            Proin fermentum dolor at congue varius. Quisque laoreet urna vitae metus convallis, vel vehicula massa egestas. Etiam facilisis ornare convallis.
+                            Nulla ullamcorper ipsum et ligula tristique aliquam. Maecenas laoreet maximus elit. In vel nulla sed ante dictum pulvinar.
+                            Phasellus at nulla ac justo facilisis elementum.
+                        </p>
+                    </div>
+
+                    <!-- Vous pourriez aussi aimer -->
+                    <div>
+                        <h5 class="font-weight-bold mb-4">VOUS POURRIEZ AUSSI AIMER</h5>
+
+                        <div class="row">
+
+                            <!-- Produit 1 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="Tol_allu.png" class="card-img-top" alt="Produit 1">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Tôle alu AIMg1 3000 x 1500 x 2 mm BRUTE + film</h6>
+                                        <p class="text-danger small">TA30152AG1</p>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-0">
+                                        <a href="#" class="btn btn-dark btn-block">Voir ce produit</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Produit 2 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="Tol_Allu_Nox.png" class="card-img-top" alt="Produit 2">
+                                    <div class="card-body">
+                                        <h6 class="card-title">TOLES ALUNOX 3000 X 1500 x !! 1,5 mm !!</h6>
+                                        <p class="text-danger small">UNOX3015P5</p>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-0">
+                                        <a href="#" class="btn btn-dark btn-block">Voir ce produit</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Produit 3 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="Dilite.png" class="card-img-top" alt="Produit 3">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Dilite BUTLER FINISH 3050 x 1500 x 3mm BF/BRUT !!</h6>
+                                        <p class="text-danger small">DILB3BF15.30</p>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-0">
+                                        <a href="#" class="btn btn-dark btn-block">Voir ce produit</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="infos">
+                    <div class="container my-4 p-3">
+
+                        <!-- Bannière 1 -->
+                        <div class="banner-card">
+                            <img src="Showroom.png" alt="Showroom">
+                            <div class="banner-overlay">
+                                Notre showroom est désormais disponible en ligne
+                            </div>
+                        </div>
+
+                        <!-- Bannière 2 -->
+                        <div class="banner-card">
+                            <img src="MDB.png" alt="Métier du Bois">
+                            <div class="banner-overlay">
+                                Métier du Bois ouvre enfin ses portes!
+                            </div>
+                        </div>
+
+                        <!-- Bannière 3 -->
+                        <div class="banner-card">
+                            <img src="Couvre-murs.png" alt="Couvre-murs">
+                            <div class="banner-overlay">
+                                Couvre-murs - Alukapping
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <footer class="text-white pt-5 pb-4 footer">
+            <div class="container text-md-left">
+                <div class="row text-md-left">
+
+                    <!-- Logo et réseaux sociaux -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <img src="DHK_logo.svg" class="img_logo" alt="DHK Logo" style="max-width: 120px;">
+                        <p class="mt-3">Your Trusted Partner for Project Solutions</p>
+                        <div class="mt-3 sociaux">
+                            <a href="#" class="text-white mr-3"><i class="fab fa-facebook fa-lg"></i></a>
+                            <a href="#" class="text-white mr-3"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="#" class="text-white mr-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                            <a href="#" class="text-white mr-3"><i class="fab fa-youtube fa-lg"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-tiktok fa-lg"></i></a>
+                            <p class="mt-2">Châtelineau - Genk - Luxembourg</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Liens utiles -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Liens utiles</h6>
+                        <p><a href="#" class="text-white">Horaire d’ouverture</a></p>
+                        <p><a href="#" class="text-white">Planning des livraisons</a></p>
+                        <p><a href="#" class="text-white">Formulaire de contact</a></p>
+                        <p><a href="#" class="text-white">Jobs</a></p>
+                        <p><a href="#" class="text-white">Politique de cookies</a></p>
+                        <p><a href="#" class="text-white">Politique de confidentialité</a></p>
+                        <p><a href="#" class="text-white">Condition générales de vente</a></p>
+                    </div>
+
+                    <!-- Formulaire d'inscription -->
+                    <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Restez informé</h6>
+                        <p>Abonnez-vous à notre newsletter mensuelle.</p>
+                        <form>
+                            <div class="form-group">
+                                <label>Prénom *</label>
+                                <input type="text" class="form-control" placeholder="Prénom">
+                            </div>
+                            <div class="form-group">
+                                <label>Nom *</label>
+                                <input type="text" class="form-control" placeholder="Nom">
+                            </div>
+                            <div class="form-group">
+                                <label>Email *</label>
+                                <input type="email" class="form-control" placeholder="Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="d-block">Vous êtes : *</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="type" id="pro" value="Professionel">
+                                    <label class="form-check-label" for="pro">Professionel</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="type" id="particulier" value="Particulier">
+                                    <label class="form-check-label" for="particulier">Particulier</label>
+                                </div>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="privacy">
+                                <label class="form-check-label small" for="privacy">En vous inscrivant à notre newsletter, vous acceptez l’utilisation de vos données personnelles conformément à notre politique de confidentialité.</label>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">S’inscrire</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+        <script type="module" src="/src/main.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#qty-minus, #qty-plus').on('click', function () {
+                    // Activer le bouton
+                    $('#add-to-cart-btn').prop('disabled', false);
+
+                    let qty = parseInt($('#qty-input').val());
+
+                    if ($(this).attr('id') === 'qty-minus') {
+                        if (qty > 1) {
+                            $('#qty-input').val(qty - 1);
+                        }
+                    } else {
+                        $('#qty-input').val(qty + 1);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
