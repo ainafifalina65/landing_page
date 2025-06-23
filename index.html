@@ -14,485 +14,655 @@
     </head>
     <body>
         <div class="nwl">
-            <div class="menu_header">
+            <div class="content">
+                <div class="menu_header">
+                    <nav>
+                        <div class="navbar navbar-expand-md navbar-light nav_header">
+                            <div class="logo_search">
+                                <div>
+                                    <a class="navbar-brand" href="#">
+                                        <img src="./DHK_logo.svg" alt="Logo" height="40">
+                                    </a>
+                                </div>
 
-                <nav>
-                    <div class="navbar navbar-expand-md navbar-light nav_header">
-                        <div class="logo_search">
-                            <div>
-                                <a class="navbar-brand" href="#">
-                                    <img src="/DHK_logo.svg" alt="Logo" height="40">
-                                </a>
-                            </div>
-                            <div class="search">
-                                <form class="form-inline my-2 my-md-0 ml-md-3 w-100 search">
-                                    <div class="input-group w-100">
-                                        <input type="text" class="form-control" placeholder="Code ou nom de l’article">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="submit">
-                                                <i class="fas fa-search text-dark"></i>
-                                            </button>
+                                <div class="search">
+                                    <form class="form-inline my-2 my-md-0 ml-md-3 w-100">
+                                        <div class="input-group w-100">
+                                            <input type="text" class="form-control" placeholder="Code ou nom de l’article">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="submit">
+                                                    <i class="fas fa-search text-dark"></i>
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
 
                             <!-- Right side menu items -->
-                        <div>
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Se connecter</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Nous contacter</a>
-                                </li>
-                                <!-- Langue dropdown -->
-                                <li class="nav-item dropdown lg">
-                                    <a class="nav-link dropdown-toggle" href="#" id="dropdownLang" role="button">
-                                        FR
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownLang">
-                                        <a class="dropdown-item" href="?lang=fr">FR</a>
-                                        <a class="dropdown-item" href="?lang=nl">NL</a>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </div>
-                </nav>
-
-                <div class="second_menu">
-                    <div class="content">
-                        <div class="nav_header">
-                            <!-- Bouton -->
-                            <button id="btnToggleMenu" class="hamburger-btn" aria-expanded="false">
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                            </button>
-
-                            <!-- Menu -->
-                            <div id="mainNavbar">
-                                <ul class="navbar">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle"
-                                           href="#"
-                                           id="produitsDropdown"
-                                           role="button"
-                                           aria-haspopup="true"
-                                           aria-expanded="false">
-                                            Produits <i class="fas fa-chevron-down ml-1"></i>
+                            <div class="right_menu">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item text-center">
+                                        <a href="#"> <i class="fas fa-sign-in-alt d-none d-login-icon"></i></a>
+                                        <a class="nav-link link" href="#">Se connecter</a>
+                                    </li>
+                                    <li class="nav-item text-center">
+                                        <a href="#"><i class="fas fa-phone d-none d-phone-icon"></i></a>
+                                        <a class="nav-link link" href="#">Nous contacter</a>
+                                    </li>
+                                    <!-- Langue dropdown -->
+                                    <li class="nav-item dropdown lg">
+                                        <a class="nav-link dropdown-toggle" href="#" id="dropdownLang" role="button">
+                                            FR
                                         </a>
-                                        <div class="dropdown-menu" aria-labelledby="produitsDropdown">
-                                            <div class="dropdown-section">
-                                                <h6 class="dropdown-header">Profils aluminium</h6>
-                                                <div class="dropdown-items">
-                                                    <a class="dropdown-item" href="#">Profiles</a>
-                                                    <a class="dropdown-item" href="#">Tubes</a>
-                                                    <a class="dropdown-item" href="#">Barres pleines</a>
-                                                    <a class="dropdown-item" href="#">Accessoires tubes</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-divider"></div>
-                                            <div class="dropdown-section">
-                                                <h6 class="dropdown-header">Tôles aluminium</h6>
-                                                <div class="dropdown-items">
-                                                    <a class="dropdown-item" href="#">Tôles brutes</a>
-                                                    <a class="dropdown-item" href="#">Tôles laquées et prélaquées</a>
-                                                    <a class="dropdown-item" href="#">Renolit</a>
-                                                    <a class="dropdown-item" href="#">Tôles spéciales</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-divider"></div>
-                                            <div class="dropdown-section">
-                                                <h6 class="dropdown-header">Pergola & Roof</h6>
-                                                <div class="dropdown-items">
-                                                    <a class="dropdown-item" href="#">Pergola en KIT</a>
-                                                    <a class="dropdown-item" href="#">Profils et accessoires</a>
-                                                    <a class="dropdown-item" href="#">Eclairage LED</a>
-                                                </div>
-                                            </div>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownLang" style="display: none;">
+                                            <a class="dropdown-item" href="?lang=fr">FR</a>
+                                            <a class="dropdown-item" href="?lang=nl">NL</a>
                                         </div>
                                     </li>
 
-
-                                    <li class="nav-item"><a class="nav-link" href="#">Pliage en Ligne</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Pergolas Roof-Line</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Quick Order</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Catalogue</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Conseils et Astuces</a></li>
                                 </ul>
                             </div>
+
                         </div>
+                    </nav>
+                    <div class="second_menu">
+                        <div class="content_nav">
+                            <div class="nav_header">
+                                <!-- Bouton -->
+                                <button id="btnToggleMenu" class="hamburger-btn" aria-expanded="false">
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                </button>
+
+                                <!-- Menu -->
+                                <div id="mainNavbar" style="display: none;">
+                                    <ul class="navbar">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="produitsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                Produits <i class="fas fa-chevron-down ml-1"></i>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="produitsDropdown" style="display: none;">
+                                                <div class="dropdown-section">
+                                                    <h6 class="dropdown-header">Profils aluminium</h6>
+                                                    <div class="dropdown-items">
+                                                        <a class="dropdown-item" href="#">Profiles</a>
+                                                        <a class="dropdown-item" href="#">Tubes</a>
+                                                        <a class="dropdown-item" href="#">Barres pleines</a>
+                                                        <a class="dropdown-item" href="#">Accessoires tubes</a>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-divider"></div>
+                                                <div class="dropdown-section">
+                                                    <h6 class="dropdown-header">Tôles aluminium</h6>
+                                                    <div class="dropdown-items">
+                                                        <a class="dropdown-item" href="#">Tôles brutes</a>
+                                                        <a class="dropdown-item" href="#">Tôles laquées et prélaquées</a>
+                                                        <a class="dropdown-item" href="#">Renolit</a>
+                                                        <a class="dropdown-item" href="#">Tôles spéciales</a>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-divider"></div>
+                                                <div class="dropdown-section">
+                                                    <h6 class="dropdown-header">Pergola &amp; Roof</h6>
+                                                    <div class="dropdown-items">
+                                                        <a class="dropdown-item" href="#">Pergola en KIT</a>
+                                                        <a class="dropdown-item" href="#">Profils et accessoires</a>
+                                                        <a class="dropdown-item" href="#">Eclairage LED</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div id="mobileProduitsMenu" class="mobile-produits d-none">
+                                                <button id="toggleMobileProduits" class="mobile-produits-btn">
+                                                    Produits <i class="fas fa-chevron-down ml-1"></i>
+                                                </button>
+                                                <div class="mobile-produits-content">
+                                                    <div class="dropdown-section">
+                                                        <h6>Profils aluminium</h6>
+                                                        <a href="#">Profiles</a>
+                                                        <a href="#">Tubes</a>
+                                                        <a href="#">Barres pleines</a>
+                                                        <a href="#">Accessoires tubes</a>
+                                                    </div>
+                                                    <div class="dropdown-section">
+                                                        <h6>Tôles aluminium</h6>
+                                                        <a href="#">Tôles brutes</a>
+                                                        <a href="#">Tôles laquées et prélaquées</a>
+                                                        <a href="#">Renolit</a>
+                                                        <a href="#">Tôles spéciales</a>
+                                                    </div>
+                                                    <div class="dropdown-section">
+                                                        <h6>Pergola &amp; Roof</h6>
+                                                        <a href="#">Pergola en KIT</a>
+                                                        <a href="#">Profils et accessoires</a>
+                                                        <a href="#">Eclairage LED</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+
+                                        <li class="nav-item"><a class="nav-link" href="#">Pliage en Ligne</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Pergolas Roof-Line</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Quick Order</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Catalogue</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Conseils et Astuces</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-
                 </div>
-
             </div>
             <div class="banner">
             </div>
+            <div class="content">
+                <section class="py-5 product" id="produit">
+                    <div class="wrapper">
+                        <div class="row text-center">
 
-            <section class="py-5 product" id="produit">
-                <div class="wrapper">
-                    <div class="row text-center">
+                            <!-- Profils aluminium -->
+                            <div class="col-md-6 col-lg-5th mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Profils aluminium</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Profile.png" class="img-fluid mb-1" alt="Profilés">
+                                                    <div>Profilés</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Tube.png" class="img-fluid mb-1" alt="Tubes">
+                                                    <div>Tubes</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Barre.png" class="img-fluid mb-1" alt="Barre pleines">
+                                                    <div>Barre pleines</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Accessoir_tube.png" class="img-fluid mb-1" alt="Accessoires tubes">
+                                                    <div>Accessoires tubes</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="#" class="btn ">Voir plus</a>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <!-- Profils aluminium -->
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Profils aluminium</h5>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-3">
-                                            <a href="product.html">
-                                                <img src="Profile.png" class="img-fluid mb-1" alt="Profilés">
-                                                <div>Profilés</div>
+                            <!-- Tôles aluminium -->
+                            <div class="col-md-6 col-lg-5th mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tôles aluminium</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Tole.png" class="img-fluid mb-1" alt="Tôles brutes">
+                                                    <div>Tôles brutes</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Tole_laquee.png" class="img-fluid mb-1" alt="Tôles laquées">
+                                                    <div>Tôles laquées et prélaquées</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Renolit.png" class="img-fluid mb-1" alt="Renolit">
+                                                    <div>Renolit</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Tole_speciale.png" class="img-fluid mb-1" alt="Tôles spéciales">
+                                                    <div>Tôles spéciales</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="#" class="btn ">Voir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Pergola & Roof -->
+                            <div class="col-md-6 col-lg-5th mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pergola &amp; Roof</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Pergola_kit.png" class="img-fluid mb-1" alt="Pergola en KIT">
+                                                    <div>Pergola en KIT</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Panneau_plaque.png" class="img-fluid mb-1" alt="Panneaux et plaques">
+                                                    <div>Panneaux et plaques</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Profile_accessoir.png" class="img-fluid mb-1" alt="Profils et accessoires">
+                                                    <div>Profils et accessoires</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html">
+                                                    <img src="Eclaireage.png" class="img-fluid mb-1" alt="Éclairage LED">
+                                                    <div>Éclairage LED</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="#" class="btn ">Voir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Seuils aluminium -->
+                            <div class="col-md-6 col-lg-5th mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Seuils aluminium</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Seuils_allu.png" class="img-fluid mb-1" alt="Seuils aluminium">
+                                                    <div>Seuils aluminium</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Embout_de_seuils.png" class="img-fluid mb-1" alt="Embouts de seuils">
+                                                    <div>Embouts de seuils</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Jonction.png" class="img-fluid mb-1" alt="Jonctions">
+                                                    <div>Jonctions &amp; coins</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Accessoir_seuil.png" class="img-fluid mb-1" alt="Accessoires seuils">
+                                                    <div>Accessoires seuils</div>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="#" class="btn ">Voir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Facade -->
+                            <div class="col-md-6 col-lg-5th mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Façade</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Bardage_allu.png" class="img-fluid mb-1" alt="Bardage aluminium">
+                                                    <div>Bardage aluminium</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Bardage_hpl.png" class="img-fluid mb-1" alt="Bardage HPL et composite">
+                                                    <div>Bardage HPL et composite</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Bardage_poly.png" class="img-fluid mb-1" alt="Bardage polycarbonat">
+                                                    <div>Bardage polycarbonate</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Fixation.png" class="img-fluid mb-1" alt="Fixation et collage">
+                                                    <div>Fixation et collage </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="#" class="btn ">Voir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row text-center">
+
+                            <!-- Panneaux Sandwichs -->
+                            <div class="col-md-6 col-lg-5th mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Panneaux Sandwichs</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Allu_panneaux.png" class="img-fluid mb-1" alt="Tôles brutes">
+                                                    <div>Tôles brutes</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="HPL.png" class="img-fluid mb-1" alt="Tôles laquées">
+                                                    <div>Tôles laquées et prélaquées</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="PVC.png" class="img-fluid mb-1" alt="Renolit">
+                                                    <div>Renolit</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Speciaux.png" class="img-fluid mb-1" alt="Tôles spéciales">
+                                                    <div>Tôles spéciales</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="#" class="btn ">Voir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Panneaux composites et thermoplastiques -->
+                            <div class="col-md-6 col-lg-5th mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Panneaux composites et thermoplastiques</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Allu_composite.png" class="img-fluid mb-1" alt="Aluminium composite">
+                                                    <div>Aluminium composite</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="PPMA.png" class="img-fluid mb-1" alt="PMMA">
+                                                    <div>PMMA</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Polycarbonate.png" class="img-fluid mb-1" alt="Polycarbonate">
+                                                    <div>Polycarbonate</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Panneaux_purenit.png" class="img-fluid mb-1" alt="Panneaux Purenit">
+                                                    <div>Panneaux Purenit</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="#" class="btn ">Voir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fabrication aluminium sur mesure  -->
+                            <div class="col-md-6 col-lg-5th mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fabrication aluminium sur mesure </h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Découpe_pliage.png" class="img-fluid mb-1" alt="Découpe/Pliage de tôles">
+                                                    <div>Découpe/Pliage de tôles</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Couvre-mure.png" class="img-fluid mb-1" alt="Couvre-murs en aluminium">
+                                                    <div>Couvre-murs en aluminium</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Cadres.png" class="img-fluid mb-1" alt="Cadres assemblés ou soudés">
+                                                    <div>Cadres assemblés ou soudés</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Fraisage.png" class="img-fluid mb-1" alt="Fraisage tôles">
+                                                    <div>Fraisage tôles</div>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="#" class="btn ">Voir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Consommables  -->
+                            <div class="col-md-6 col-lg-5th mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Consommables </h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                </a><a href="product.html">
+                                                <img src="Sealing.png" class="img-fluid mb-1" alt="Sealing et tape">
+                                                <div>Sealing et tape</div>
                                             </a>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Tube.png" class="img-fluid mb-1" alt="Tubes">
-                                            <div>Tubes</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Barre.png" class="img-fluid mb-1" alt="Barre pleines">
-                                            <div>Barre pleines</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Accessoir_tube.png" class="img-fluid mb-1" alt="Accessoires tubes">
-                                            <div>Accessoires tubes</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer bg-transparent">
-                                    <a href="#" class="btn ">Voir plus</a>
+
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Bandes.png" class="img-fluid mb-1" alt="Bandes et membranes">
+                                                    <div>Bandes et membranes</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Calles.png" class="img-fluid mb-1" alt="Calles à vitrage">
+                                                    <div>Calles à vitrage</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                </a><a href="product.html">
+                                                <img src="Produit_dhk.png" class="img-fluid mb-1" alt="Produits d’entretien">
+                                                <div>Produits d’entretien</div>
+                                            </a>
+
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="#" class="btn ">Voir plus</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Tôles aluminium -->
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Tôles aluminium</h5>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-3">
-                                            <img src="Tole.png" class="img-fluid mb-1" alt="Tôles brutes">
-                                            <div>Tôles brutes</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Tole_laquee.png" class="img-fluid mb-1" alt="Tôles laquées">
-                                            <div>Tôles laquées et prélaquées</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Renolit.png" class="img-fluid mb-1" alt="Renolit">
-                                            <div>Renolit</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Tole_speciale.png" class="img-fluid mb-1" alt="Tôles spéciales">
-                                            <div>Tôles spéciales</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer bg-transparent">
-                                    <a href="#" class="btn ">Voir plus</a>
+                            <!-- Aménagement intérieur/extérieur -->
+                            <div class="col-md-6 col-lg-5th mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Aménagement intérieur/extérieur</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Garde_corps.png" class="img-fluid mb-1" alt="Garde-corps ">
+                                                    <div>Garde-corps</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Moustiquaire.png" class="img-fluid mb-1" alt="Moustiquaires prémontés">
+                                                    <div>Moustiquaires prémontés</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Palissade.png" class="img-fluid mb-1" alt="Palissades aluminium">
+                                                    <div>Palissades aluminium</div>
+                                                </a>
+                                            </li>
+                                            <li class="mb-3">
+                                                <a href="product.html">
+                                                    <img src="Terrasse.png" class="img-fluid mb-1" alt="Revêtement de terrasse">
+                                                    <div>Revêtement de terrasse</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="#" class="btn ">Voir plus</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Pergola & Roof -->
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pergola & Roof</h5>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-3">
-                                            <img src="Pergola_kit.png" class="img-fluid mb-1" alt="Pergola en KIT">
-                                            <div>Pergola en KIT</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Panneau_plaque.png" class="img-fluid mb-1" alt="Panneaux et plaques">
-                                            <div>Panneaux et plaques</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Profile_accessoir.png" class="img-fluid mb-1" alt="Profils et accessoires">
-                                            <div>Profils et accessoires</div>
-                                        </li>
-                                        <li>
-                                            <img src="Eclaireage.png" class="img-fluid mb-1" alt="Éclairage LED">
-                                            <div>Éclairage LED</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer bg-transparent">
-                                    <a href="#" class="btn ">Voir plus</a>
+
+                        </div>
+                    </div>
+                </section>
+                <section class="py-4 text-white annonces">
+                    <div class="container">
+                        <h6 class="mb-3">Annonces</h6>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="h-100">
+                                    <img src="Metier_du_bois.png" class="img-fluid mb-2" alt="M3 Métiers du bois">
+                                    <p class=" mb-0">Métiers du Bois ouvre enfin ses portes !</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Seuils aluminium -->
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Seuils aluminium</h5>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-3">
-                                            <img src="Seuils_allu.png" class="img-fluid mb-1" alt="Seuils aluminium">
-                                            <div>Seuils aluminium</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Embout_de_seuils.png" class="img-fluid mb-1" alt="Embouts de seuils">
-                                            <div>Embouts de seuils</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Jonction.png" class="img-fluid mb-1" alt="Jonctions">
-                                            <div>Jonctions & coins</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Accessoir_seuil.png" class="img-fluid mb-1" alt="Accessoires seuils">
-                                            <div>Accessoires seuils</div>
-                                        </li>
-
-                                    </ul>
+                            <div class="col-md-4 mb-3">
+                                <div class="h-100">
+                                    <img src="Couvre_mur.png" class="img-fluid mb-2" alt="Couvre-mur ALUKAPPING">
+                                    <p class=" mb-0">Couvre-mur ALUKAPPING</p>
                                 </div>
-                                <div class="card-footer bg-transparent">
-                                    <a href="#" class="btn ">Voir plus</a>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="h-100">
+                                    <img src="Seuil_RB.png" class="img-fluid mb-2" alt="Seuil RB">
+                                    <p class=" mb-0">Seuil RB</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row text-center">
+                </section>
+                <section class="py-4 services">
+                    <div class="wrapper">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="mb-0 title">Découvrez nos services</h4>
+                            <a href="#" class="btn btn-g text-white">En savoir plus <span>→</span></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card text-white">
+                                    <div class="card-img-wrapper"><img src="Pliage.png" class="card-img" alt="Pliage en ligne"></div>
 
-                        <!-- Facade -->
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Façade</h5>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-3">
-                                            <img src="Bardage_allu.png" class="img-fluid mb-1" alt="Bardage aluminium">
-                                            <div>Bardage aluminium</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Bardage_hpl.png" class="img-fluid mb-1" alt="Bardage HPL et composite">
-                                            <div>Bardage HPL et composite</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Bardage_poly.png" class="img-fluid mb-1" alt="Bardage polycarbonat">
-                                            <div>Bardage polycarbonate</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Fixation.png" class="img-fluid mb-1" alt="Fixation et collage">
-                                            <div>Fixation et collage </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer bg-transparent">
-                                    <a href="#" class="btn ">Voir plus</a>
+                                    <div class="card-img-overlay d-flex align-items-end">
+                                        <h5 class="card-title p-2 fs-32">Pliage en ligne</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card text-white">
+                                    <div class="card-img-wrapper"><img src="Pergola_pre_poser.png" class="card-img" alt="Pergolas prêtes à poser"></div>
 
-                        <!-- Panneaux Sandwichs -->
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Panneaux Sandwichs</h5>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-3">
-                                            <img src="Allu_panneaux.png" class="img-fluid mb-1" alt="Tôles brutes">
-                                            <div>Tôles brutes</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="HPL.png" class="img-fluid mb-1" alt="Tôles laquées">
-                                            <div>Tôles laquées et prélaquées</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="PVC.png" class="img-fluid mb-1" alt="Renolit">
-                                            <div>Renolit</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Speciaux.png" class="img-fluid mb-1" alt="Tôles spéciales">
-                                            <div>Tôles spéciales</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer bg-transparent">
-                                    <a href="#" class="btn ">Voir plus</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Panneaux composites et thermoplastiques -->
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Panneaux composites et thermoplastiques</h5>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-3">
-                                            <img src="Allu_composite.png" class="img-fluid mb-1" alt="Aluminium composite">
-                                            <div>Aluminium composite</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="PPMA.png" class="img-fluid mb-1" alt="PMMA">
-                                            <div>PMMA</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Polycarbonate.png" class="img-fluid mb-1" alt="Polycarbonate">
-                                            <div>Polycarbonate</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Panneaux_purenit.png" class="img-fluid mb-1" alt="Panneaux Purenit">
-                                            <div>Panneaux Purenit</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer bg-transparent">
-                                    <a href="#" class="btn ">Voir plus</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Fabrication aluminium sur mesure  -->
-                        <div class="col-md-6 col-lg-3 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Fabrication aluminium sur mesure </h5>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-3">
-                                            <img src="Découpe_pliage.png" class="img-fluid mb-1" alt="Découpe/Pliage de tôles">
-                                            <div>Découpe/Pliage de tôles</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Couvre-mure.png" class="img-fluid mb-1" alt="Couvre-murs en aluminium">
-                                            <div>Couvre-murs en aluminium</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Cadres.png" class="img-fluid mb-1" alt="Cadres assemblés ou soudés">
-                                            <div>Cadres assemblés ou soudés</div>
-                                        </li>
-                                        <li class="mb-3">
-                                            <img src="Fraisage.png" class="img-fluid mb-1" alt="Fraisage tôles">
-                                            <div>Fraisage tôles</div>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <div class="card-footer bg-transparent">
-                                    <a href="#" class="btn ">Voir plus</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </section>
-            <section class="py-4 text-white annonces">
-                <div class="container">
-                    <h6 class="mb-3">Annonces</h6>
-                    <div class="row">
-                        <div class="col-md-4 mb-3">
-                            <div class="h-100">
-                                <img src="Metier_du_bois.png" class="img-fluid mb-2" alt="M3 Métiers du bois">
-                                <p class=" mb-0">Métiers du Bois ouvre enfin ses portes !</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="h-100">
-                                <img src="Couvre_mur.png" class="img-fluid mb-2" alt="Couvre-mur ALUKAPPING">
-                                <p class=" mb-0">Couvre-mur ALUKAPPING</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <div class="h-100">
-                                <img src="Seuil_RB.png" class="img-fluid mb-2" alt="Seuil RB">
-                                <p class=" mb-0">Seuil RB</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="py-4 services">
-                <div class="wrapper">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="mb-0 title">Découvrez nos services</h4>
-                        <a href="#" class="btn btn-g text-white">En savoir plus <span>&rarr;</span></a>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <div class="card text-white">
-                                <div class="card-img-wrapper"><img src="Pliage.png" class="card-img" alt="Pliage en ligne"></div>
-
-                                <div class="card-img-overlay d-flex align-items-end">
-                                    <h5 class="card-title p-2 fs-32">Pliage en ligne</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="card text-white">
-                                <div class="card-img-wrapper"><img src="Pergola_pre_poser.png" class="card-img" alt="Pergolas prêtes à poser"></div>
-
-                                <div class="card-img-overlay d-flex align-items-end">
-                                    <h5 class="card-title p-2 fs-32">Pergolas prêtes à poser</h5>
+                                    <div class="card-img-overlay d-flex align-items-end">
+                                        <h5 class="card-title p-2 fs-32">Pergolas prêtes à poser</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section class="py-5 livre">
-                <div class="container">
-                    <div class="row align-items-center text-white">
-                        <div class="col-md-5 mb-4 mb-md-0">
-                            <img src="DHK_Catalog.png" class="img-fluid" alt="Catalogue DHK">
-                        </div>
-                        <div class="col-md-7">
-                            <h4 class="mb-3 text">Découvrez notre catalogue et trouvez le produit parfait pour vous !
-                            Parcourez nos collections et laissez-vous inspirer.</h4>
-                            <a href="#" class="btn btn-s">Consulter</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="testimonial">
-                <div class="container">
-                    <h3 class="title">Témoignages clients</h3>
-                    <div class="row">
-                        <div class="col-md-4 mb-4">
-                            <div class="testimonial-box">
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-                                </p>
-                                <div class="testimonial-separator"></div>
-                                <div class="testimonial-name">James Charles</div>
+                </section>
+                <section class="py-5 livre">
+                    <div class="container">
+                        <div class="row align-items-center text-white">
+                            <div class="col-md-5 mb-4 mb-md-0">
+                                <img src="DHK_Catalog.png" class="img-fluid" alt="Catalogue DHK">
                             </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="testimonial-box">
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-                                </p>
-                                <div class="testimonial-separator"></div>
-                                <div class="testimonial-name">Olivia R.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="testimonial-box">
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-                                </p>
-                                <div class="testimonial-separator"></div>
-                                <div class="testimonial-name">Thomas Clark</div>
+                            <div class="col-md-7">
+                                <h4 class="mb-3 text">Découvrez notre catalogue et trouvez le produit parfait pour vous !
+                                    Parcourez nos collections et laissez-vous inspirer.</h4>
+                                <a href="#" class="btn btn-s">Consulter</a>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
+                <section class="testimonial">
+                    <div class="container">
+                        <h3 class="title">Témoignages clients</h3>
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="testimonial-box">
+                                    <p>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+                                    </p>
+                                    <div class="testimonial-separator"></div>
+                                    <div class="testimonial-name">James Charles</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="testimonial-box">
+                                    <p>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+                                    </p>
+                                    <div class="testimonial-separator"></div>
+                                    <div class="testimonial-name">Olivia R.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="testimonial-box">
+                                    <p>
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+                                    </p>
+                                    <div class="testimonial-separator"></div>
+                                    <div class="testimonial-name">Thomas Clark</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            </section>
-
+                </section>
+            </div>
             <footer class="text-white pt-5 pb-4 footer">
                 <div class="container text-md-left">
                     <div class="row text-md-left">
@@ -539,7 +709,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Email *</label>
-                                    <input type="email" class="form-control" placeholder="Email *" required>
+                                    <input type="email" class="form-control" placeholder="Email *" required="">
                                 </div>
                                 <div class="form-group">
                                     <label class="d-block">Vous êtes : *</label>
@@ -563,7 +733,6 @@
                     </div>
                 </div>
             </footer>
-
         </div>
 
 

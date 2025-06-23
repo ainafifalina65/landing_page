@@ -29,6 +29,42 @@ $primary: #f49237;
   color: #fff;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
+// --- FOOTER
+.footer {
+  background: #111822;
+
+  .container {
+    @extend %wrapper;
+  }
+
+  .sociaux {
+    position: absolute;
+    bottom: 0;
+    @media (max-width: 920px) {
+      position: relative!important;
+    }
+  }
+}
+
+.row_product{
+  @media (max-width: 1200px) {
+    padding: 0 5vw;
+  }
+  @media (max-width: 768px) {
+    padding: 0 7.5vw;
+  }
+}
+
+@media (max-width: 920px) {
+  .btn-secondary{
+    margin-bottom: 10px;
+  }
+}
+
 // Scrollbar
 ::-webkit-scrollbar {
   width: 8px;
@@ -37,6 +73,13 @@ $primary: #f49237;
 }
 ::-webkit-scrollbar-thumb {
   background-color: $primary;
+}
+
+.content{
+  padding: 0 5vw;
+  @media (max-width: 768px) {
+    padding: 0 7.5vw;
+  }
 }
 
 // Global
@@ -68,7 +111,7 @@ html, body {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #000;
+  background-color: #fff;
   margin: 5px 0;
   transition: 0.4s;
 }
@@ -102,10 +145,14 @@ html, body {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-  .form-group.panier label{
-    color: black!important;
+.form-group.panier label{
+  color: black!important;
+}
+.search{
+  @media (max-width: 920px) {
+    display: none;
   }
-
+}
 .dropdown-menu {
   display: none;
 }
@@ -119,12 +166,34 @@ html, body {
     width: 100%;
     z-index: 99;
     top: 0;
+    left: 0;
   }
 
   &.single_product {
+    .row_product{
+      display: flex;
+      align-items: center;
+      .rounded{
+        div{
+          background:#ccc;
+          width:100%; padding-top:100%; border-radius:8px;
+          @media (max-width: 920px) {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+    }
     position: relative;
     margin-top: 200px;
     padding: 50px 0;
+    span.text-muted{
+      font-size: 24px;
+    }
+    .st{
+      font-size: 24px;
+      color: black!important;
+    }
     .col-md-4.mb-4{
       padding: 0 10px;
     }
@@ -152,15 +221,47 @@ html, body {
   nav {
     background: #131921;
     padding: 20px 0;
+    @media (max-width: 920px) {
+      padding: 0;
+    }
 
     .logo_search{
-     display: flex;
+      display: flex;
       align-items: center;
       gap: 50px;
+    }
+    .navbar-nav{
+      flex-direction: inherit;
+      @media (max-width: 920px) {
+        .nav-link.dropdown-toggle{
+          font-size: 20px;
+          margin-left: 20px;
+        }
+        .d-login-icon,
+        .d-phone-icon {
+          display: block !important;
+          margin-bottom: 5px;
+        }
+        .nav-link.link{
+          display: none;
+        }
+        .nav-item.text-center{
+          margin-right: 40px;
+        }
+      }
+      .fas{
+        &:before{
+          font-size: 20px;
+          color: white;
+        }
+      }
     }
 
     .navbar-brand img {
       height: 70px;
+      @media (max-width: 920px) {
+        height: 50px;
+      }
     }
 
     .wrapper {
@@ -172,6 +273,9 @@ html, body {
       flex-direction: row;
       justify-content: space-between;
       position: relative;
+      @media (max-width: 430px) {
+        justify-content: center;
+      }
 
       .main_mavbar {
         display: flex!important;
@@ -200,6 +304,9 @@ html, body {
           transform: translateX(-50%);
           min-width: 3rem;
           text-align: center;
+          @media (max-width: 920px) {
+            transform: translateX(-15%);
+          }
         }
 
         .dropdown-item {
@@ -214,7 +321,6 @@ html, body {
         .search {
           display: flex;
           align-items: center;
-
           .fa-search {
             font-size: 21px;
           }
@@ -234,8 +340,11 @@ html, body {
         font-weight: 700;
         color: #fff !important;
 
-        @media (min-width: 769px) {
+        @media (min-width: 920px) {
           padding-left: 50px;
+        }
+        @media (max-width: 920px) {
+          padding: 5px;
         }
       }
     }
@@ -243,18 +352,24 @@ html, body {
 
   // --- SECOND MENU (produits)
   .second_menu {
-    .content{
+    background: $primary;
+    .content_nav{
       max-width: 1400px;
       margin: 0 auto;
       .nav_header{
         max-width: 1000px;
+        @media (max-width: 920px) {
+          max-height: 630px;
+          overflow: auto;
+          padding: 0;
+        }
       }
     }
     .navbar{
       max-width: 1400px;
       margin: 0 auto;
     }
-    background: $primary;
+
     @media (max-width: 920px) {
       ul{
         display: flex;
@@ -276,6 +391,9 @@ html, body {
 
       @media (max-width: 920px) {
         display: inline-block;
+        position: relative;
+        transform: translateX(-100%);
+        right: -97%;
       }
     }
 
@@ -287,6 +405,11 @@ html, body {
       z-index: 1000;
       min-width: 200px;
       padding: 10px;
+      @media (max-width: 920px) {
+        position: relative;
+        float: none;
+        min-width: 335px;
+      }
     }
 
     .dropdown-section {
@@ -297,6 +420,7 @@ html, body {
         font-size: 18px;
         color: black;
         cursor: pointer;
+        text-align: center;
 
         &:hover {
           background: #eee;
@@ -314,16 +438,26 @@ html, body {
         min-width: 180px;
         z-index: 1000;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        @media (max-width: 920px) {
+          position: relative;
+          left: 0;
+          z-index: 0;
+        }
       }
 
-      &:hover .dropdown-items {
-        display: block;
+      @media (min-width: 920px) {
+        &:hover .dropdown-items {
+          display: block;
+        }
       }
     }
 
     ul {
       margin-bottom: 0;
       padding: 15px 0;
+      @media (max-width: 920px) {
+        padding: 0 0 50px;
+      }
 
       li {
         display: inline-block;
@@ -340,6 +474,13 @@ html, body {
           color: #fff;
           position: relative;
           text-decoration: none;
+          @media (max-width: 920px) {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+          }
 
           &::before {
             content: "";
@@ -380,6 +521,16 @@ html, body {
 
   // --- PRODUITS
   .product {
+    @media (min-width: 992px) {
+      .col-lg-5th {
+        flex: 0 0 auto;
+        width: 20%;
+      }
+    }
+
+    img.img-fluid.mb-1{
+      min-height: 140px;
+    }
 
     .wrapper {
       max-width: 1400px;
@@ -392,6 +543,7 @@ html, body {
       display: grid;
       grid-template-columns: 1fr 1fr;
       margin: 0;
+      gap: 10px;
 
       .mb-3 div {
         color: black;
@@ -422,6 +574,7 @@ html, body {
         color: black;
         font-weight: 600;
         height: 25px;
+        font-size: 18px;
       }
 
       .card-footer {
@@ -456,6 +609,16 @@ html, body {
     @extend %wrapper;
     background: #386938;
     margin: 25px auto 100px;
+    @media (max-width: 920px) {
+      margin: 0 auto 0;
+    }
+    .h-100 img{
+      width: 100%;
+    }
+    .mb-0{
+      color: #fff;
+    }
+
 
     .container {
       width: 100%;
@@ -466,9 +629,24 @@ html, body {
   // --- SERVICES
   .services {
     background: #fff;
-
+    margin-bottom: 80px;
+    @media (max-width: 920px) {
+      margin-bottom: 0;
+    }
+    .d-flex{
+      padding: 0 5px;
+    }
+    h5.card-title.p-2.fs-32{
+      z-index: 2;
+      @media (max-width: 920px) {
+        font-size: 22px;
+      }
+    }
     .row {
       margin-bottom: 80px;
+      @media (max-width: 920px) {
+        margin-bottom: 0;
+      }
     }
 
     .wrapper {
@@ -480,6 +658,9 @@ html, body {
       color: black;
       font-weight: 700;
       font-size: 36px;
+      @media (max-width: 920px) {
+        font-size: 26px;
+      }
     }
 
     .fs-32 {
@@ -540,35 +721,31 @@ html, body {
       font-size: 36px;
       font-weight: normal;
       max-width: 550px;
+      @media (max-width: 920px) {
+        font-size: 26px;
+      }
     }
   }
-  // --- FOOTER
-  .footer {
-    background: #111822;
 
-    .container {
-      @extend %wrapper;
-    }
-
-    .sociaux {
-      position: absolute;
-      bottom: 0;
-    }
-  }
   // --- TÉMOIGNAGES
   .testimonial {
     margin-bottom: 80px;
+    background: white;
+    padding: 50px 0;
 
     .title {
       color: black;
       font-weight: 700;
       font-size: 36px;
       margin-bottom: 30px;
+      @media (max-width: 920px) {
+        font-size: 26px;
+      }
     }
 
     .container {
       @extend %wrapper;
-      padding: 0;
+      padding: 0 5px;
     }
 
     .testimonial-box {
@@ -598,6 +775,13 @@ html, body {
   }
   //--- DESCRIPTION
   .decription{
+
+    @media (max-width: 1200px) {
+      grid-template-columns: auto;
+      .my-5{
+        margin-bottom: 0!important;
+      }
+    }
     @extend %wrapper;
     display: grid;
     grid-template-columns: 1fr 1fr;

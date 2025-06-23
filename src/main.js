@@ -5,6 +5,11 @@ import 'popper.js';
 import 'bootstrap';
 
 $(function () {
+    $(document).ready(function () {
+        $('.dropdown-header').on('click', function () {
+            $(this).next('.dropdown-items').slideToggle(); // ou .toggle() si tu veux sans animation
+        });
+    });
 
     $('.dropdown-menu').hide();
 
