@@ -6,6 +6,22 @@ import 'bootstrap';
 
 $(function () {
     $(document).ready(function () {
+        $('#qty-minus, #qty-plus').on('click', function () {
+            // Activer le bouton
+            $('#add-to-cart-btn').prop('disabled', false);
+
+            let qty = parseInt($('#qty-input').val());
+
+            if ($(this).attr('id') === 'qty-minus') {
+                if (qty > 1) {
+                    $('#qty-input').val(qty - 1);
+                }
+            } else {
+                $('#qty-input').val(qty + 1);
+            }
+        });
+    });
+    $(document).ready(function () {
         $('.dropdown-header').on('click', function () {
             $(this).next('.dropdown-items').slideToggle(); // ou .toggle() si tu veux sans animation
         });

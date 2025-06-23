@@ -20,7 +20,7 @@
                     <div class="navbar navbar-expand-md navbar-light nav_header">
                         <div class="logo_search">
                             <div>
-                                <a class="navbar-brand" href="#">
+                                <a class="navbar-brand" href="/">
                                     <img src="./DHK_logo.svg" alt="Logo" height="40">
                                 </a>
                             </div>
@@ -158,190 +158,192 @@
                 </div>
 
             </div>
-            <div class="container">
-                <div class="row">
-                    <!-- Image Produit -->
-                    <div class="col-md-6 text-center">
-                        <div class="border rounded">
-                            <div style="background:#ccc; width:100%; padding-top:100%; border-radius:8px;"></div>
+
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <!-- Image Produit -->
+                        <div class="col-md-6 text-center d-content">
+                            <div class="border rounded">
+                                <div style="background:#ccc; width:100%; padding-top:100%; border-radius:8px;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Détails Produit -->
+                        <div class="col-md-6 d-content">
+                            <p class="text-uppercase text-warning small">Product Category</p>
+                            <h2 class="font-weight-bold">Product Name</h2>
+                            <p class="text-muted mb-2">Code: <strong class="text-dark ">TA20102.33</strong></p>
+
+                            <p>
+                                <span class="text-muted">Prix standard:</span> <strong class="txt-d">361,53 €</strong><br>
+                                <span class="text-muted">Prix net:</span> <strong class="text-success h5 txt-d">325,38 € / PCE</strong>
+                            </p>
+
+                            <p class="text-success small">
+                                <i class="text-success mr-1">&#x2714;</i> En stock
+                            </p>
+
+                            <div class="d-flex align-items-center mb-3 detail">
+                                <div class="input-group" style="width: 110px;">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary" type="button" id="qty-minus">-</button>
+                                    </div>
+                                    <input type="text" class="chiffre text-center" value="1" id="qty-input">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="qty-plus">+</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-success ml-3" id="add-to-cart-btn" disabled>Ajouter au panier</button>
+                            </div>
+
+
+                            <!-- Détails dimensions -->
+                            <div class="mb-3">
+                                <h6>Détails</h6>
+                                <p class="mb-0">Longueur : 3000 mm</p>
+                                <p class="mb-0">Largeur : 1800 mm</p>
+                                <p class="mb-0">Épaisseur : 6 mm</p>
+                                <p class="mb-0">Couleur : Transparent</p>
+                            </div>
+
+                            <!-- Couleurs -->
+                            <div class="form-group panier">
+                                <label for="color">Couleurs</label>
+                                <select class="form-control" id="color">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+
+                            <!-- Découpe -->
+                            <div class="form-group panier">
+                                <label><strong>Découpe</strong></label>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="">Quantité</label>
+                                        <input type="number" class="form-control" placeholder="Quantité">
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Longueur</label>
+                                        <input type="number" class="form-control" placeholder="Longueur">
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Largeur</label>
+                                        <input type="number" class="form-control" placeholder="Largeur">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Boutons infos -->
+                            <div class="mt-3">
+                                <p><strong style="color:black">Plus d'informations</strong></p>
+                                <button class="btn btn-secondary text-white" disabled>Fiche produit</button>
+                                <button class="btn btn-secondary text-white" disabled>Documentation technique</button>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="decription">
+                    <div class="container my-5">
 
-                    <!-- Détails Produit -->
-                    <div class="col-md-6">
-                        <p class="text-uppercase text-warning small">Product Category</p>
-                        <h2 class="font-weight-bold">Product Name</h2>
-                        <p class="text-muted mb-2">Code: <strong class="text-dark">TA20102.33</strong></p>
+                        <!-- Description -->
+                        <div class="mb-4">
+                            <h5 class="font-weight-bold">DESCRIPTION</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit varius nisl, sit amet mollis orci fermentum et.
+                                Integer convallis metus lorem, eget consectetur sem consequat ut. Integer massa metus, hendrerit quis eleifend id, cursus vitae magna.
+                                Proin fermentum dolor at congue varius. Quisque laoreet urna vitae metus convallis, vel vehicula massa egestas. Etiam facilisis ornare convallis.
+                                Nulla ullamcorper ipsum et ligula tristique aliquam. Maecenas laoreet maximus elit. In vel nulla sed ante dictum pulvinar.
+                                Phasellus at nulla ac justo facilisis elementum.
+                            </p>
+                        </div>
 
-                        <p>
-                            <span class="text-muted">Prix standard:</span> <strong>361,53 €</strong><br>
-                            <span class="text-muted">Prix net:</span> <strong class="text-success h5">325,38 € / PCE</strong>
-                        </p>
+                        <!-- Vous pourriez aussi aimer -->
+                        <div>
+                            <h5 class="font-weight-bold mb-4">VOUS POURRIEZ AUSSI AIMER</h5>
 
-                        <p class="text-success small">
-                            <i class="text-success mr-1">&#x2714;</i> En stock
-                        </p>
+                            <div class="row">
 
-                        <div class="d-flex align-items-center mb-3 detail">
-                            <div class="input-group" style="width: 110px;">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button" id="qty-minus">-</button>
+                                <!-- Produit 1 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="Tol_allu.png" class="card-img-top" alt="Produit 1">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Tôle alu AIMg1 3000 x 1500 x 2 mm BRUTE + film</h6>
+                                            <p class="text-danger small">TA30152AG1</p>
+                                        </div>
+                                        <div class="card-footer bg-transparent border-0">
+                                            <a href="#" class="btn btn-dark btn-block">Voir ce produit</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <input type="number" class="chiffre text-center" value="1" id="qty-input">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="qty-plus">+</button>
+
+                                <!-- Produit 2 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="Tol_Allu_Nox.png" class="card-img-top" alt="Produit 2">
+                                        <div class="card-body">
+                                            <h6 class="card-title">TOLES ALUNOX 3000 X 1500 x !! 1,5 mm !!</h6>
+                                            <p class="text-danger small">UNOX3015P5</p>
+                                        </div>
+                                        <div class="card-footer bg-transparent border-0">
+                                            <a href="#" class="btn btn-dark btn-block">Voir ce produit</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Produit 3 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="Dilite.png" class="card-img-top" alt="Produit 3">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Dilite BUTLER FINISH 3050 x 1500 x 3mm BF/BRUT !!</h6>
+                                            <p class="text-danger small">DILB3BF15.30</p>
+                                        </div>
+                                        <div class="card-footer bg-transparent border-0">
+                                            <a href="#" class="btn btn-dark btn-block">Voir ce produit</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="infos">
+                        <div class="container my-4 p-3">
+
+                            <!-- Bannière 1 -->
+                            <div class="banner-card">
+                                <img src="Showroom.png" alt="Showroom">
+                                <div class="banner-overlay">
+                                    <p>Notre showroom est désormais disponible en ligne</p>
                                 </div>
                             </div>
-                            <button class="btn btn-success ml-3" id="add-to-cart-btn" disabled>Ajouter au panier</button>
-                        </div>
 
-
-                        <!-- Détails dimensions -->
-                        <div class="mb-3">
-                            <h6>Détails</h6>
-                            <p class="mb-0">Longueur : 3000 mm</p>
-                            <p class="mb-0">Largeur : 1800 mm</p>
-                            <p class="mb-0">Épaisseur : 6 mm</p>
-                            <p class="mb-0">Couleur : Transparent</p>
-                        </div>
-
-                        <!-- Couleurs -->
-                        <div class="form-group panier">
-                            <label for="color">Couleurs</label>
-                            <select class="form-control" id="color">
-                                <option>Select</option>
-                            </select>
-                        </div>
-
-                        <!-- Découpe -->
-                        <div class="form-group panier">
-                            <label><strong>Découpe</strong></label>
-                            <div class="form-row">
-                                <div class="col">
-                                    <label for="">Quantité</label>
-                                    <input type="number" class="form-control" placeholder="Quantité">
-                                </div>
-                                <div class="col">
-                                    <label for="">Longueur</label>
-                                    <input type="number" class="form-control" placeholder="Longueur">
-                                </div>
-                                <div class="col">
-                                    <label for="">Largeur</label>
-                                    <input type="number" class="form-control" placeholder="Largeur">
+                            <!-- Bannière 2 -->
+                            <div class="banner-card">
+                                <img src="MDB.png" alt="Métier du Bois">
+                                <div class="banner-overlay">
+                                    <p>Métier du Bois ouvre enfin ses portes!</p>
                                 </div>
                             </div>
+
+                            <!-- Bannière 3 -->
+                            <div class="banner-card">
+                                <img src="Couvre-murs.png" alt="Couvre-murs">
+                                <div class="banner-overlay">
+                                    <p>Couvre-murs - Alukapping</p>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <!-- Boutons infos -->
-                        <div class="mt-3">
-                            <p><strong style="color:black">Plus d'informations</strong></p>
-                            <button class="btn btn-secondary text-white" disabled>Fiche produit</button>
-                            <button class="btn btn-secondary text-white" disabled>Documentation technique</button>
-                        </div>
+
                     </div>
                 </div>
             </div>
 
-
-            <div class="decription">
-                <div class="container my-5">
-
-                    <!-- Description -->
-                    <div class="mb-4">
-                        <h5 class="font-weight-bold">DESCRIPTION</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit varius nisl, sit amet mollis orci fermentum et.
-                            Integer convallis metus lorem, eget consectetur sem consequat ut. Integer massa metus, hendrerit quis eleifend id, cursus vitae magna.
-                            Proin fermentum dolor at congue varius. Quisque laoreet urna vitae metus convallis, vel vehicula massa egestas. Etiam facilisis ornare convallis.
-                            Nulla ullamcorper ipsum et ligula tristique aliquam. Maecenas laoreet maximus elit. In vel nulla sed ante dictum pulvinar.
-                            Phasellus at nulla ac justo facilisis elementum.
-                        </p>
-                    </div>
-
-                    <!-- Vous pourriez aussi aimer -->
-                    <div>
-                        <h5 class="font-weight-bold mb-4">VOUS POURRIEZ AUSSI AIMER</h5>
-
-                        <div class="row">
-
-                            <!-- Produit 1 -->
-                            <div class="col-md-4 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <img src="Tol_allu.png" class="card-img-top" alt="Produit 1">
-                                    <div class="card-body">
-                                        <h6 class="card-title">Tôle alu AIMg1 3000 x 1500 x 2 mm BRUTE + film</h6>
-                                        <p class="text-danger small">TA30152AG1</p>
-                                    </div>
-                                    <div class="card-footer bg-transparent border-0">
-                                        <a href="#" class="btn btn-dark btn-block">Voir ce produit</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Produit 2 -->
-                            <div class="col-md-4 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <img src="Tol_Allu_Nox.png" class="card-img-top" alt="Produit 2">
-                                    <div class="card-body">
-                                        <h6 class="card-title">TOLES ALUNOX 3000 X 1500 x !! 1,5 mm !!</h6>
-                                        <p class="text-danger small">UNOX3015P5</p>
-                                    </div>
-                                    <div class="card-footer bg-transparent border-0">
-                                        <a href="#" class="btn btn-dark btn-block">Voir ce produit</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Produit 3 -->
-                            <div class="col-md-4 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <img src="Dilite.png" class="card-img-top" alt="Produit 3">
-                                    <div class="card-body">
-                                        <h6 class="card-title">Dilite BUTLER FINISH 3050 x 1500 x 3mm BF/BRUT !!</h6>
-                                        <p class="text-danger small">DILB3BF15.30</p>
-                                    </div>
-                                    <div class="card-footer bg-transparent border-0">
-                                        <a href="#" class="btn btn-dark btn-block">Voir ce produit</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="infos">
-                    <div class="container my-4 p-3">
-
-                        <!-- Bannière 1 -->
-                        <div class="banner-card">
-                            <img src="Showroom.png" alt="Showroom">
-                            <div class="banner-overlay">
-                                Notre showroom est désormais disponible en ligne
-                            </div>
-                        </div>
-
-                        <!-- Bannière 2 -->
-                        <div class="banner-card">
-                            <img src="MDB.png" alt="Métier du Bois">
-                            <div class="banner-overlay">
-                                Métier du Bois ouvre enfin ses portes!
-                            </div>
-                        </div>
-
-                        <!-- Bannière 3 -->
-                        <div class="banner-card">
-                            <img src="Couvre-murs.png" alt="Couvre-murs">
-                            <div class="banner-overlay">
-                                Couvre-murs - Alukapping
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-            </div>
         </div>
         <footer class="text-white pt-5 pb-4 footer">
             <div class="container text-md-left">
@@ -413,27 +415,7 @@
                 </div>
             </div>
         </footer>
-
-
         <script type="module" src="/src/main.js"></script>
 
-        <script>
-            $(document).ready(function () {
-                $('#qty-minus, #qty-plus').on('click', function () {
-                    // Activer le bouton
-                    $('#add-to-cart-btn').prop('disabled', false);
-
-                    let qty = parseInt($('#qty-input').val());
-
-                    if ($(this).attr('id') === 'qty-minus') {
-                        if (qty > 1) {
-                            $('#qty-input').val(qty - 1);
-                        }
-                    } else {
-                        $('#qty-input').val(qty + 1);
-                    }
-                });
-            });
-        </script>
     </body>
 </html>
