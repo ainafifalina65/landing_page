@@ -258,6 +258,12 @@ html, body {
     }
     .navbar-nav{
       flex-direction: inherit;
+      .panier{
+        @media (min-width:921px) {
+          padding-left: 50px;
+        }
+      }
+
       @media (max-width: 920px) {
         .nav-link.dropdown-toggle{
           font-size: 20px;
@@ -311,6 +317,9 @@ html, body {
 
       .dropdown {
         position: relative;
+       @media (max-width: 920px) {
+         padding-left: 35px;
+       }
 
         button {
           width: 40px;
@@ -558,6 +567,14 @@ html, body {
 
   // --- PRODUITS
   .product {
+      .product_dt{
+        .col-lg-5th{
+          @media (max-width: 1024px) {
+            padding: 0 5px!important;
+          }
+        }
+      }
+
     @media (min-width: 992px) {
       .col-lg-5th {
         flex: 0 0 auto;
@@ -567,6 +584,9 @@ html, body {
 
     img.img-fluid.mb-1{
       min-height: 140px;
+      @media (max-width: 1024px) {
+        min-height: inherit;
+      }
     }
 
     .wrapper {
@@ -578,7 +598,7 @@ html, body {
       padding-left: 0;
       list-style: none;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:50% 50%;
       margin: 0;
       gap: 10px;
 
@@ -612,6 +632,10 @@ html, body {
         font-weight: 600;
         height: 25px;
         font-size: 18px;
+        display: flex;
+        @media (max-width: 1024px) {
+          font-size: 14px;
+        }
       }
 
       .card-footer {
