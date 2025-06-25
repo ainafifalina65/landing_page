@@ -247,7 +247,7 @@ html, body {
   // --- NAVIGATION
   nav {
     background: #131921;
-    padding: 20px 0;
+    padding: 10px 0;
     @media (max-width: 920px) {
       padding: 0;
     }
@@ -292,9 +292,9 @@ html, body {
     }
 
     .navbar-brand img {
-      height: 70px;
+      height: 50px;
       @media (max-width: 920px) {
-        height: 50px;
+        height: 40px;
       }
     }
 
@@ -461,7 +461,7 @@ html, body {
       padding: 5px;
 
       h6 {
-        font-size: 18px;
+        font-size: 16px;
         color: black;
         cursor: pointer;
         text-align: center;
@@ -501,7 +501,7 @@ html, body {
 
     ul {
       margin-bottom: 0;
-      padding: 15px 0;
+      padding:5px 0;
       @media (max-width: 920px) {
         padding: 0 0 50px;
       }
@@ -521,6 +521,7 @@ html, body {
           color: #fff;
           position: relative;
           text-decoration: none;
+          font-weight: 500;
           @media (max-width: 920px) {
             display: flex;
             width: 100%;
@@ -559,13 +560,13 @@ html, body {
 
   // --- BANNIÈRE
   .banner {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     background: url("/Banner_landing.jpg") no-repeat center top;
     background-size: cover;
     background-position: center 5%;
     @media (max-width: 920px) {
-      height: 70vh;
+      height: 50vh;
       padding-top: 50px;
     }
   }
