@@ -347,7 +347,7 @@ html, body {
           min-width: 3rem;
           text-align: center;
           @media (max-width: 920px) {
-            transform: translateX(-15%);
+            transform: translateX(55%);
             position: absolute;
             left: 10px;
           }
@@ -564,6 +564,10 @@ html, body {
     background: url("/Banner_landing.jpg") no-repeat center top;
     background-size: cover;
     background-position: center 5%;
+    @media (max-width: 920px) {
+      height: 70vh;
+      padding-top: 50px;
+    }
   }
 
   // --- PRODUITS
@@ -584,9 +588,14 @@ html, body {
     }
 
     img.img-fluid.mb-1{
-      min-height: 140px;
       @media (max-width: 1024px) {
         min-height: inherit;
+      }
+      @media (max-width: 768px) {
+        border:1px solid ;
+      }
+      @media (max-width: 600px) {
+        width: 100%;
       }
     }
 
@@ -704,12 +713,21 @@ html, body {
       width: 100%;
       max-width: 100%;
       padding: 0 50px;
+      @media (max-width: 920px) {
+        padding: 0 20px;
+      }
     }
   }
   // --- SERVICES
   .services {
     background: #fff;
     margin-bottom: 80px;
+    .d-flex.mb-3{
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
     .card {
       &.card-services {
         position: relative;
@@ -753,12 +771,15 @@ html, body {
       font-weight: 700;
       font-size: 36px;
       @media (max-width: 920px) {
-        font-size: 26px;
+        font-size: 22px;
       }
     }
 
     .fs-32 {
       font-size: 32px;
+      @media (max-width: 920px) {
+        font-size: 22px;
+      }
     }
 
     .btn-g {
@@ -816,7 +837,7 @@ html, body {
       font-weight: normal;
       max-width: 550px;
       @media (max-width: 920px) {
-        font-size: 26px;
+        font-size: 22px;
       }
     }
   }
