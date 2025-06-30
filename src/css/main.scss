@@ -581,12 +581,8 @@ html, body {
         }
       }
 
-    @media (min-width: 992px) {
-      .col-lg-5th {
-        flex: 0 0 auto;
-        width: 20%;
-      }
-    }
+
+
 
     img.img-fluid.mb-1{
       @media (max-width: 1024px) {
@@ -837,6 +833,9 @@ html, body {
       font-size: 36px;
       font-weight: normal;
       max-width: 550px;
+      @media (max-width: 1200px) {
+        font-size: 28px;
+      }
       @media (max-width: 920px) {
         font-size: 22px;
       }
